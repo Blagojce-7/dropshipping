@@ -103,7 +103,7 @@ function checkCartStatus() {
 
     if (total === 0) {
         // Пренасочи на почетната страница ако вкупниот износ е 0
-        window.location.href = '/HomePage/index.html';
+        window.location.href = '/index.html';
     } else {
         cartContent.style.display = 'block'; // Прикажи ја содржината на количката
         shippingForm.style.display = 'block'; // Прикажи ја формата за испорака
@@ -178,7 +178,7 @@ document.getElementById('removeAllBtn').addEventListener('click', function () {
     updateCartTotal(); // Ажурирај го вкупниот износ
     updateCartCount(); // Ажурирај го бројот на ставки во количката по отстранувањето
     checkCartStatus(); // Провери ја состојбата на количката по отстранувањето
-    window.location.href = '/HomePage/index.html'; // Пренасочи на почетната страница
+    window.location.href = '/index.html'; // Пренасочи на почетната страница
 });
 
 // Ажурирај го бројот на ставки во количката кога ќе се вчита страницата
