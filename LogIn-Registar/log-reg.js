@@ -153,13 +153,13 @@ function simulateSocialLogin(provider) {
     // Поставување на логото и текстот за социјално логирање
     switch(provider) {
         case 'Facebook':
-            providerLogo.src = "/LogIn-Registar/facebook.webp";
+            providerLogo.src = "/images/facebook.webp";
             break;
         case 'Google':
-            providerLogo.src = "/LogIn-Registar/google.png";
+            providerLogo.src = "/images/google.png";
             break;
         case 'LinkedIn':
-            providerLogo.src = "/LogIn-Registar/linked.webp";
+            providerLogo.src = "/images/linked.webp";
             break;
     }
     providerLogo.alt = provider + " Logo";

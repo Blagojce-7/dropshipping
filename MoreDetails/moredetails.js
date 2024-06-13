@@ -55,13 +55,13 @@ function loadProductDetails() {
       1: {
         title: "DUO RING",
         price: "254.99€",
-        image: "/img/jewellery/DuoRing.webp",
+        image: "/images/duoring.webp",
         description: "Sleek and twist, the ultimate hook-up. Although opposites, they complement each other so well. This ring is handcrafted in 14k solid gold. The two bands are thicker than their sister Stacker Rings and move oh-so-effortlessly together.",
         thumbnails: [
-          "/img/jewellery/duo-ring/duoring.webp",
-          "/img/jewellery/duo-ring/duoring1.webp",
-          "/img/jewellery/duo-ring/duoring2.webp",
-          "/img/jewellery/duo-ring/duoring3.webp"
+          "/images/duoring.webp",
+          "/images/duoring1.webp",
+          "/images/duoring2.webp",
+          "/images/duoring3.webp"
         ],
         presentation: `Every detail is meticulously designed to create a refined and elegant look. Crafted with the highest standards of goldsmithing, this ring is a symbol of eternal love and sophistication. Perfect for any occasion, whether for daily wear or special moments. The ring offers unparalleled comfort and style, while the golden lines shine with exquisite brilliance. Invest in something that will last forever and remind you of the beauty of simplicity and elegance.Each ring is a testament to exceptional craftsmanship, embodying both tradition and modernity. The 14k solid gold ensures durability and a timeless appeal, making it a cherished addition to any jewelry collection. Its versatile design allows it to be worn alone or paired with other pieces, enhancing its allure. Whether you're treating yourself or gifting it to a loved one, this ring is sure to become a treasured heirloom, admired for its beauty and cherished for its meaning. Celebrate life's precious moments with a piece that captures the essence of elegance and grace.`,
         specification: `<ul>
@@ -75,14 +75,14 @@ function loadProductDetails() {
       2: {
         title: "GEOMETRIC DANGLE DROP EARRINGS",
         price: "6000.00€",
-        image: "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop.jpg",
+        image: "/images/geometric-dangle-drop.jpg",
         description: "These Drop Earrings are crafted with 22 Karat gold their geometric oval shapes and delicate Chain links exude sophistication.",
         thumbnails: [
-          "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop.jpg",
-          "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop1.jpg",
-          "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop2.jpg",
-          "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop3.jpg",
-          "/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop4.jpg",
+          "/images/geometric-dangle-drop.jpg",
+          "/images/geometric-dangle-drop1.jpg",
+          "/images/geometric-dangle-drop2.jpg",
+          "/images/geometric-dangle-drop3.jpg",
+          "/images/geometric-dangle-drop4.jpg",
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
       specification: `<ul>
@@ -96,12 +96,12 @@ function loadProductDetails() {
       3: {
         title: "LUSTER PEARL HOOP EARRINGS",
         price: "30.99€",
-        image: "/img/jewellery/pearl-hoops/organicpearlhoops.jpg",
+        image: "/images/organicpearlhoops.jpg",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/pearl-hoops/organicpearlhoops.jpg",
-          "/img/jewellery/pearl-hoops/organicpearlhoops1.jpg",
-          "/img/jewellery/pearl-hoops/organicpearlhoops2.jpg"
+          "/images/organicpearlhoops.jpg",
+          "/images/organicpearlhoops1.jpg",
+          "/images/organicpearlhoops2.jpg"
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
         specification: `<ul>
@@ -115,13 +115,13 @@ function loadProductDetails() {
       4: {
         title: "MINIMAL MODERN BRACELET",
         price: "1500.00€",
-        image: "/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet.jpg",
+        image: "/images/minimalmodernbracelet.jpg",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet.jpg",
-          "/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet1.jpg",
-          "/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet2.jpg",
-          "/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet3.jpg"
+          "/images/minimalmodernbracelet.jpg",
+          "/images/minimalmodernbracelet1.jpg",
+          "/images/minimalmodernbracelet2.jpg",
+          "/images/minimalmodernbracelet3.jpg"
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
         specification: `<ul>
@@ -135,14 +135,14 @@ function loadProductDetails() {
       5: {
         title: "RADIANT FLORAL DIAMOND MANGALSUTRA",
         price: "3300.00€",
-        image: "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
+        image: "/images/radiant-floral-diamond-mangalsutra.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
         specification: `<ul>
@@ -156,14 +156,14 @@ function loadProductDetails() {
       6: {
         title: "SEASHELL PEARL BANGLE",
         price: "3475.00€",
-        image: "/img/jewellery/seashell-pearl-bangle.webp",
+        image: "/images/seashell-pearl-bangle.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
         specification: `<ul>
@@ -177,14 +177,14 @@ function loadProductDetails() {
       7: {
         title: "SMALL HOOPS",
         price: "44.99€",
-        image: "/img/jewellery/small-hoops.webp",
+        image: "/images/small-hoops.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ],
         presentation: `Add a touch of elegance to any look with these exquisite Drop Earrings, meticulously crafted to enhance your natural beauty. Featuring graceful polished oval outlines, these earrings are the epitome of sophistication. The smooth, lustrous finish of the ovals catches the light beautifully, creating a dazzling effect that draws attention to your face. <br><br> Perfect for pairing with both a business suit and a little black dress, these Drop Earrings are versatile enough to complement any outfit. Whether you're heading to a formal meeting or a glamorous evening event, these earrings will add a touch of class and elegance to your ensemble. <br><br> Crafted from high-quality materials, these earrings are designed to last, ensuring that they remain a staple in your jewelry collection for years to come. The lightweight design ensures comfort, making them ideal for all-day wear.`,
         specification: `<ul>
@@ -198,105 +198,105 @@ function loadProductDetails() {
       8: {
         title: "WOLF ROLLER MOSS REMOVAL RAKE",
         price: "40.99€",
-        image: "/img/gardening-tools/roller-moss-removal-rake.webp",
+        image: "/images/roller-moss-removal-rake.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       9: {
         title: "WOLF SOIL RAKE",
         price: "15.99€",
-        image: "/img/gardening-tools/soil-rake.webp",
+        image: "/images/soil-rake.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       10: {
         title: "WILKINSON SWORD 3 PRONG CULTIVATOR",
         price: "15.99€",
-        image: "/img/gardening-tools/wilkinson-sword-3-prong.webp",
+        image: "/images/wilkinson-sword-3-prong.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       11: {
         title: "WILKINSON SWORD ULTRALIGHT SHOVEL",
         price: "65.99€",
-        image: "/img/gardening-tools/wilkinson-sword-ultralight-shovel.webp",
+        image: "/images/wilkinson-sword-ultralight-shovel.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       12: {
         title: "WOLF WINDOW WIPER",
         price: "18.99€",
-        image: "/img/gardening-tools/window-wiper.webp",
+        image: "/images/window-wiper.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       13: {
         title: "WOLF ADJUSTABLE ANVIL TREE LOPPER",
         price: "45.99€",
-        image: "/img/gardening-tools/wolf-adjustable-anvil.webp",
+        image: "/images/wolf-adjustable-anvil.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       14: {
         title: "WOLF LAWN EDGE TRIMMER",
         price: "50.99€",
-        image: "/img/gardening-tools/wolf-lawn-edge-trimmer.webp",
+        image: "/images/wolf-lawn-edge-trimmer.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       15: {
         title: "WOLF TELESCOPIC ANVIL LOPPERS",
         price: "70.99€",
-        image: "/img/gardening-tools/wolf-telescopic-anvil-loppers.webp",
+        image: "/images/wolf-telescopic-anvil-loppers.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       16: {
@@ -305,11 +305,11 @@ function loadProductDetails() {
         image: "/img/kitchen/analogue-controller.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       17: {
@@ -318,11 +318,11 @@ function loadProductDetails() {
         image: "/img/kitchen/casserole-2.0l-16cm-with-lid.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       18: {
@@ -331,11 +331,11 @@ function loadProductDetails() {
         image: "/img/kitchen/cobalt-royal-porcelain.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       19: {
@@ -344,11 +344,11 @@ function loadProductDetails() {
         image: "/img/kitchen/coral-12-set-for-6-person.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       20: {
@@ -357,11 +357,11 @@ function loadProductDetails() {
         image: "/img/kitchen/espresso-pot-kitty-2.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       21: {
@@ -370,11 +370,11 @@ function loadProductDetails() {
         image: "/img/kitchen/felix-cutting-board.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       22: {
@@ -383,11 +383,11 @@ function loadProductDetails() {
         image: "/img/kitchen/kettle-2.4l.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       23: {
@@ -396,11 +396,11 @@ function loadProductDetails() {
         image: "/img/kitchen/kitchen-paring-knife-solingen-12cm.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       24: {
@@ -409,11 +409,11 @@ function loadProductDetails() {
         image: "/img/kitchen/kitchen-shears-stainless.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       25: {
@@ -422,11 +422,11 @@ function loadProductDetails() {
         image: "/img/kitchen/magic-harmony-crystal.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       26: {
@@ -435,115 +435,115 @@ function loadProductDetails() {
         image: "/img/kitchen/magnetic-stand-knife.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       27: {
         title: "MASTERPIECE COOKWARE Z SET - GRANDE",
         price: "499.99€",
-        image: "/img/kitchen/masterpiece-coockware.webp",
+        image: "/images/masterpiece-coockware.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       28: {
         title: "BATMAN ADVENTURES 12\" COLLECTIBLE ACTION FIGURE",
         price: "20.99€",
-        image: "/img/toys/batman-adventures-16armor.webp",
+        image: "/images/batman-adventures-16armor.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       29: {
         title: "DISNEY JUNIOR MINNIE MOUSE BUTTERFLY BALLERINA PLUSH",
         price: "39.99€",
-        image: "/img/toys/disney-junior-minnie-mouse.webp",
+        image: "/images/disney-junior-minnie-mouse.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       30: {
         title: "FISHER-PRICE THOMAS & FRIENDS WOODEN RAILWAY",
         price: "15.99€",
-        image: "/img/toys/fisher-price-thomas.webp",
+        image: "/images/fisher-price-thomas.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       31: {
         title: "GB FURIOUS CHALLENGER ELECTRIC POWER ROAD RACING",
         price: "70.99€",
-        image: "/img/toys/gb-furious-challenger-electric.webp",
+        image: "/images/gb-furious-challenger-electric.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       32: {
         title: "HOT WHEELS MARVEL WOOD CAR RACERS DIY KIT",
         price: "15.99€",
-        image: "/img/toys/hot-wheels-marvel-wood-car.webp",
+        image: "/images/hot-wheels-marvel-wood-car.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       33: {
         title: "KID GALAXY 20V POWER DRIVE HIGH SPEED",
         price: "149.99€",
-        image: "/img/toys/kid-galaxy-20v-power.webp",
+        image: "/images/kid-galaxy-20v-power.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
       34: {
         title: "LEGO HARRY POTTER HOGWARTS CASTLE 2,660 PIECES",
         price: "119.99€",
-        image: "/img/toys/lego-harry-potter-2.660pieces.webp",
+        image: "/images/lego-harry-potter-2.660pieces.webp",
         description: "asdad",
         thumbnails: [
-          "/img/jewellery/radiant-floral-diamond-mangalsutra.webp",
-          "/img/jewellery/seashell-pearl-bangle.webp",
-          "/img/jewellery/small-hoops.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp",
-          "/img/gardening-tools/roller-moss-removal-rake.webp"
+          "/images/radiant-floral-diamond-mangalsutra.webp",
+          "/images/seashell-pearl-bangle.webp",
+          "/images/small-hoops.webp",
+          "/images/roller-moss-removal-rake.webp",
+          "/images/roller-moss-removal-rake.webp"
         ]
       },
     };
