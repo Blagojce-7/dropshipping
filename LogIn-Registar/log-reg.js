@@ -89,7 +89,7 @@ document.getElementById('signInForm').addEventListener('submit', function(event)
             localStorage.setItem('loggedInUser', JSON.stringify(user)); // Го зачувува најавениот корисник во localStorage
             alert('Login successful!');
             // Пренасочување кон home страницата со име и презиме како параметри во URL
-            window.location.href = `/HomePage/home.html?firstName=${user.firstName}&lastName=${user.lastName}`;
+            window.location.href = `/HomePage/index.html?firstName=${user.firstName}&lastName=${user.lastName}`;
         } else if (user.signUpType !== 'primary' && user.password === password) {
             alert(`Please use ${user.signUpType} to log in.`);
         } else {
@@ -196,7 +196,7 @@ function simulateSocialLogin(provider) {
         if (user && user.signUpType === provider.toLowerCase() && user.password === password) {
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             alert(`Successful login with ${provider}!`);
-            window.location.href = '/HomePage/home.html';
+            window.location.href = '/HomePage/index.html';
         } else {
             alert(`No profile associated with this ${provider} email or password. Please register.`);
         }

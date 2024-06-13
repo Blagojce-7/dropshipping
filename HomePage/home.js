@@ -296,7 +296,7 @@ function hideLoginButton() {
 document.getElementById('logoutLink').addEventListener('click', function() {
     localStorage.removeItem('loggedInUser'); // Бришење на најавениот корисник од localStorage
     localStorage.removeItem('cartItems'); // Чистење на кошницата со продукти
-    window.location.href = "/HomePage/home.html"; // Пренасочување кон страницата за најава
+    window.location.href = "/HomePage/index.html"; // Пренасочување кон страницата за најава
 });
 
 // Кога корисникот е најавен, прикажување на неговото име на десната страна
@@ -397,7 +397,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.removeItem('loggedInUser');
             alert('Account successfully deleted.');
             closeModal('deactivateModal');
-            window.location.href = "/HomePage/home.html";
+            window.location.href = "/HomePage/index.html";
         } else {
             alert('Incorrect password.');
         }
