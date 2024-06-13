@@ -89,7 +89,7 @@ document.getElementById('signInForm').addEventListener('submit', function(event)
             localStorage.setItem('loggedInUser', JSON.stringify(user)); // Го зачувува најавениот корисник во localStorage
             alert('Login successful!');
             // Пренасочување кон home страницата со име и презиме како параметри во URL
-            window.location.href = `/index.html?firstName=${user.firstName}&lastName=${user.lastName}`;
+            window.location.href = `https://blagojce-7.github.io/dropshipping/index.html?firstName=${user.firstName}&lastName=${user.lastName}`;
         } else if (user.signUpType !== 'primary' && user.password === password) {
             alert(`Please use ${user.signUpType} to log in.`);
         } else {
@@ -153,13 +153,13 @@ function simulateSocialLogin(provider) {
     // Поставување на логото и текстот за социјално логирање
     switch(provider) {
         case 'Facebook':
-            providerLogo.src = "/images/facebook.webp";
+            providerLogo.src = "https://blagojce-7.github.io/dropshipping/images/facebook.webp";
             break;
         case 'Google':
-            providerLogo.src = "/images/google.png";
+            providerLogo.src = "https://blagojce-7.github.io/dropshipping/images/google.png";
             break;
         case 'LinkedIn':
-            providerLogo.src = "/images/linked.webp";
+            providerLogo.src = "https://blagojce-7.github.io/dropshipping/images/linked.webp";
             break;
     }
     providerLogo.alt = provider + " Logo";
@@ -196,7 +196,7 @@ function simulateSocialLogin(provider) {
         if (user && user.signUpType === provider.toLowerCase() && user.password === password) {
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             alert(`Successful login with ${provider}!`);
-            window.location.href = '/index.html';
+            window.location.href = 'https://blagojce-7.github.io/dropshipping/index.html';
         } else {
             alert(`No profile associated with this ${provider} email or password. Please register.`);
         }
