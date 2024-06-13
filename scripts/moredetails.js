@@ -302,7 +302,7 @@ function loadProductDetails() {
       16: {
         title: "ANALOGUE THERMOCONTROLLER",
         price: "25.99€",
-        image: "/img/kitchen/analogue-controller.webp",
+        image: "/images/analogue-controller.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -315,7 +315,7 @@ function loadProductDetails() {
       17: {
         title: "POT, 7.0 L, Ø 24CM, H. 16.5CM WITH LID",
         price: "275.99€",
-        image: "/img/kitchen/casserole-2.0l-16cm-with-lid.webp",
+        image: "/images/casserole-2.0l-16cm-with-lid.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -328,7 +328,7 @@ function loadProductDetails() {
       18: {
         title: "COBALT ROYAL - COMPLETE PORCELAIN 68 PIECES",
         price: "300.99€",
-        image: "/img/kitchen/cobalt-royal-porcelain.webp",
+        image: "/images/cobalt-royal-porcelain.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -341,7 +341,7 @@ function loadProductDetails() {
       19: {
         title: "CORAL - 12 PC COFFEE SET FOR 6 PERSONS",
         price: "78.99€",
-        image: "/img/kitchen/coral-12-set-for-6-person.webp",
+        image: "/images/coral-12-set-for-6-person.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -354,7 +354,7 @@ function loadProductDetails() {
       20: {
         title: "ESPRESSO POT KITTY 2 CUP S",
         price: "74.99€",
-        image: "/img/kitchen/espresso-pot-kitty-2.webp",
+        image: "/images/espresso-pot-kitty-2.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -367,7 +367,7 @@ function loadProductDetails() {
       21: {
         title: "FELIX CUTTING BOARD 20x29cm",
         price: "25.99€",
-        image: "/img/kitchen/felix-cutting-board.webp",
+        image: "/images/felix-cutting-board.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -380,7 +380,7 @@ function loadProductDetails() {
       22: {
         title: "KETTLE 2.4 L",
         price: "200.99€",
-        image: "/img/kitchen/kettle-2.4l.webp",
+        image: "/images/kettle-2.4l.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -393,7 +393,7 @@ function loadProductDetails() {
       23: {
         title: "KITCHEN PARING KNIFE SOLINGEN FELIX (12 cm blade)",
         price: "73.99€",
-        image: "/img/kitchen/kitchen-paring-knife-solingen-12cm.webp",
+        image: "/images/kitchen-paring-knife-solingen-12cm.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -406,7 +406,7 @@ function loadProductDetails() {
       24: {
         title: "KITCHEN SHEARS, STAINLESS STEEL",
         price: "38.99€",
-        image: "/img/kitchen/kitchen-shears-stainless.webp",
+        image: "/images/kitchen-shears-stainless.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -419,7 +419,7 @@ function loadProductDetails() {
       25: {
         title: "MAGIC HARMONY CRYSTAL & STAINLESS STEEL",
         price: "95.99€",
-        image: "/img/kitchen/magic-harmony-crystal.webp",
+        image: "/images/magic-harmony-crystal.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -432,7 +432,7 @@ function loadProductDetails() {
       26: {
         title: "MAGNETIC KNIFE STAND, SOLID WALNUT",
         price: "24.99€",
-        image: "/img/kitchen/magnetic-stand-knife.webp",
+        image: "/images/magnetic-stand-knife.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "/images/radiant-floral-diamond-mangalsutra.webp",
@@ -630,7 +630,7 @@ function updateCartCount() {
   const cartLink = document.getElementById('cart-link');
   const cartIcon = document.getElementById('cart-icon');
   if (cartItems.length > 0) {
-      cartLink.href = "/Shoping-cart/shop-cart.html";
+      cartLink.href = "/shop-cart.html";
       cartLink.classList.remove('disabled');
       cartIcon.style.opacity = '1';
   } else {
