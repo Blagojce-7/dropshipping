@@ -279,3 +279,80 @@ p {
     color: #007bff;
 }
 
+/* MOBILE RESP */
+/* Медија-квери за мобилни уреди */
+@media (max-width: 768px) {
+    .dk-footer {
+        padding: 30px 0;
+    }
+    
+    .dk-footer .contact-us {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dk-footer .contact-us .contact-info {
+        margin-left: 20px;
+    }
+
+    .dk-footer .contact-us.contact-us-last {
+        margin-left: 0;
+    }
+
+    .dk-footer-box-info {
+        position: static;
+        top: 0;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-awarad {
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    .footer-awarad p {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .footer-widget ul {
+        width: 100%;
+        float: none;
+    }
+
+    .footer-widget {
+        text-align: center;
+    }
+
+    .dk-footer-form {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dk-footer-form input[type=email] {
+        width: calc(100% - 50px);
+        margin-bottom: 10px;
+    }
+
+    .dk-footer-form button[type=submit] {
+        width: 100%;
+        position: relative;
+        padding: 10px 0;
+        border-radius: 50px;
+    }
+
+    .message {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .copyright {
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+}

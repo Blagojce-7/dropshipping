@@ -105,3 +105,96 @@
 .btn-danger:hover {
     background-color: #c9302c;
 }
+
+
+/* MOBILE RESP */
+
+@media (max-width: 768px) {
+    .btn-purchase {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .flex-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .shopping-cart-section, .info-section {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      width: 100%;
+    }
+  
+    .shopping-cart-section h3, .info-section h3 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+  
+    .info-section .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .info-section .form-group label {
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
+  
+    .info-section .form-group input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .info-section button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .info-section button[type="submit"]:hover {
+      background-color: #555;
+    }
+  
+    .cart-total {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      background-color: #e3f2fd;
+      border: 1px solid #bbdefb;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  
+    .cart-total-title, .cart-total-price {
+      font-size: 1em;
+      font-weight: bold;
+      color: #1976d2;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+  
+    .btn-danger {
+      padding: 10px;
+      font-size: 1em;
+      background-color: #d9534f;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .btn-danger:hover {
+      background-color: #c9302c;
+    }
+  }
+  

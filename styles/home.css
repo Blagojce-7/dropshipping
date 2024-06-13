@@ -308,3 +308,121 @@ body.modal-open {
   margin: 0;
   font-size: 14px; /* Подесување на големината на фонтот */
 }
+
+
+
+
+/* MOBILE RESP */
+
+@media (max-width: 768px) {
+  /* Навигационо мени */
+  .navbar {
+      text-align: center;
+      padding: 10px;
+  }
+
+  /* Категорија */
+  #category {
+      padding: 10% 5%;
+  }
+
+  /* Картички со производи */
+  #product-cards {
+      padding: 10% 5%;
+  }
+
+  /* Подножје (footer) */
+  #footer {
+      margin-bottom: 5%;
+      margin-top: 5%;
+  }
+
+  /* Копчиња за филтрирање */
+  .filter-btns {
+      text-align: center;
+  }
+
+  .filter-btn {
+      margin: 10px 5px;
+      font-size: 14px;
+  }
+
+  .filter-btn::after {
+      width: 0;
+      height: 1px;
+  }
+
+  /* Копче за нагоре */
+  .up-icon {
+      bottom: 10px;
+      right: 10px;
+      font-size: 24px;
+  }
+
+  /* Профил секција */
+  #profileSection, #changePasswordSection {
+      width: 90%;
+      padding: 10px;
+  }
+
+  /* Модален прозорец */
+  .modal-content {
+      margin: 20% auto;
+      width: 90%;
+      max-width: 300px;
+  }
+
+  .close {
+      font-size: 20px;
+  }
+
+  .modal-content h2 {
+      font-size: 20px;
+  }
+
+  .modal-content p {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .modal-content input {
+      padding: 8px;
+      margin-bottom: 15px;
+  }
+
+  .modal-content button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .modal-content .password-toggle {
+      margin-top: -5px;
+      margin-bottom: 15px;
+  }
+
+  .modal-content .password-toggle input[type="checkbox"] {
+      transform: scale(1);
+  }
+
+  .modal-content .password-toggle label {
+      font-size: 12px;
+  }
+
+  /* Менито за подесувања */
+  .settings-menu {
+      top: 30px;
+      right: 10px;
+      width: 90%;
+  }
+
+  .settings-menu a {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  /* Центрирање на насловите */
+  .canvas-title {
+      text-align: center;
+      font-size: 24px;
+  }
+}

@@ -244,3 +244,100 @@
   opacity: .5;
 }
 
+
+/* MOBILE RESP */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar-search input {
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .navbar-search button {
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  #button-login {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+
+  .button-85 {
+    width: 48%;
+    text-align: center;
+  }
+
+  .cart-link {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+
+  .cart-icon {
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn-purchase {
+    width: 90%;
+    padding: 10px;
+  }
+
+  #shopping-cart {
+    padding: 5% 2%;
+  }
+
+  .cart-total {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .up-icon {
+    font-size: 1.5rem;
+    top: 90%;
+    left: 85%;
+  }
+
+  #not-found {
+    font-size: 32px;
+  }
+
+  #user-name {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #logoutBtn {
+    font-size: 14px;
+    padding: 10px;
+    height: auto;
+  }
+}

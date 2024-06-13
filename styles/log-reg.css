@@ -449,3 +449,121 @@ footer a {
 #providerName img {
     display: inline; /* Го прикажува логото како inline елемент за да биде во линија со текстот */
 }
+
+
+/* MOBILE RESP */
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .social-container {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .social-container a {
+        height: 30px;
+        width: 30px;
+    }
+
+    input, select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 10px;
+        max-width: 100%;
+    }
+
+    .sign-in-container, .sign-up-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 300px;
+        margin: 20% auto;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .modal-content input {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    .modal-content button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .modal-content .password-toggle {
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    .modal-content .password-toggle input[type="checkbox"] {
+        transform: scale(1);
+    }
+
+    .modal-content .password-toggle label {
+        font-size: 12px;
+    }
+
+    footer {
+        position: relative;
+        padding: 10px;
+    }
+
+    .forgot-password-container form {
+        width: 90%;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .social {
+        margin: 5px;
+    }
+
+    #providerLogo {
+        width: 24px;
+        margin-right: 5px;
+    }
+}
