@@ -967,10 +967,4 @@ function checkSubscriptionStatus() {
     return false;
 }
 
-// Додавање на слушател на настани на формата за да се спречи автоматското скролање на врвот на страницата
-document.querySelector('.dk-footer-form form').addEventListener('submit', function(event) {
-    if (!checkSubscriptionStatus()) {
-        subscribe(event);
-    }
-});
 // -------------------------------------------------------------- //

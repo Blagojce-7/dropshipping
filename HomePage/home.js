@@ -466,9 +466,7 @@ document.getElementById('showLoginPassword').addEventListener('change', function
     const passwordInput = document.getElementById('loginPassword');
     if (this.checked) {
         passwordInput.type = 'text'; // Прикажување на лозинката
-    } else {
-        passwordInput.type = 'password'; // Скривање на лозинката
-    }
+    } 
 });
 
 // Вчитување на претплатените емаил адреси од localStorage
@@ -523,10 +521,4 @@ function checkSubscriptionStatus() {
     return false;
 }
 
-// Додавање на слушател на настани на формата за да се спречи автоматското скролање на врвот на страницата
-document.querySelector('.dk-footer-form form').addEventListener('submit', function(event) {
-    if (!checkSubscriptionStatus()) {
-        subscribe(event);
-    }
-});
 // -------------------------------------------------------------- //
