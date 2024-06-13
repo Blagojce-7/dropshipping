@@ -1,0 +1,464 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-link {
+  color: mediumblue;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-link.disabled {
+  pointer-events: none;
+  color: lightgray;
+}
+
+.cart-icon {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.cart-link.disabled .cart-icon {
+  opacity: 0.5;
+}
+
+.badge {
+  background-color: lightgray;
+  color: black;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+
+.cart-link.disabled .badge {
+  background-color: darkgray;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product-description {
+  font-size: 1.1em; /* Намалување на големината на фонтот */
+  line-height: 1.4; /* Поставување на соодветен размак помеѓу редовите за полесно читање */
+  max-width: 600px; /* Ограничување на максималната ширина за да не биде премногу долг текстот */
+  word-wrap: break-word; /* Автоматско префрлање на нов ред ако е потребно */
+  margin: 0; /* Центрирање на текстот во родителскиот елемент */
+  padding: 10px; /* Додавање на внатрешен размак за полесно читање */
+}
+
+/* Стилови за насловот на производите */
+.product-title {
+  font-size: 2em; /* Поставување на помал фонт */
+  font-weight: normal; /* Ако сакате фонтот да не биде подебел */
+  color: #333; /* Можете да ја промените бојата ако сакате */
+  margin-bottom: 20px; /* Простор под насловот */
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-images {
+  position: relative;
+  text-align: center;
+  right: 2em;
+}
+
+.product-images img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.thumbnail-container {
+  display: none; /* Скриј ги минијатурите */
+}
+
+.navigation-arrows {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.navigation-arrows.left {
+  left: 10px;
+}
+
+.navigation-arrows.right {
+  right: 10px;
+}
+
+.product-info {
+  flex: 2;
+  margin-left: 20px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.info-icon {
+  width: 30px; /* Прилагодете ја ширината на иконата */
+  height: 30px; /* Прилагодете ја висината на иконата */
+  margin-right: 10px;
+}
+
+
+
+
+/* Стилови за текстот со цената */
+#product-price {
+    font-size: 1.3em; /* Поголем фонт */
+    font-weight: bold; /* Подебели букви */
+    color: #d81b60; /* Боја на текстот за цената */
+    display: inline-block;
+    padding: 3px;
+    border: 2px solid #e91e63; /* Боја на обележувањето */
+    border-radius: 5px; /* Заоблени агли */
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+button:active {
+  background-color: #c2185b;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-secondary:active {
+  background-color: #4e555b;
+}
+
+/* Стилови за ѕвездите за рецензија */
+.star {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.3s, transform 0.3s; /* Додадени транзиции за мазни анимации */
+}
+
+.star:hover,
+.star.selected {
+  color: gold;
+  transform: scale(1.2); /* Зголемување при селектирање или кога е под маусот */
+}
+
+/* Стилови за секцијата за рецензии */
+.review-section,
+.review-list-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Светло сива позадина за секцијата */
+  border-radius: 10px; /* Заоблени агли */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Лесна сенка за длабочина */
+}
+
+.review-list-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #444;
+  border-bottom: 2px solid #e91e63; /* Линија под насловот */
+  padding-bottom: 10px; /* Простор под насловот */
+}
+
+/* Дополнителни стилови за секцијата за рецензии */
+.review-section h2,
+.review-list-section h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center; /* Центриран текст за насловите */
+  position: relative;
+}
+
+.review-section h2::after,
+.review-list-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #e91e63;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Стилови за рецензии */
+.review {
+  border: 2px solid red; /* Црвена линија околу сите четири страни */
+  padding: 10px;
+  display: inline-block; /* Рецензиите една до друга */
+  vertical-align: top; /* Усогласување на рецензиите на врвот */
+  margin-right: 10px; /* Простор меѓу рецензиите */
+  margin-bottom: 10px; /* Простор под рецензиите */
+  width: calc(33.33% - 20px); /* Пример за ширина од 33.33% за три колони */
+  box-sizing: border-box; /* За правилно изразување на ширината со вклучени маргини и падинзи */
+  border-radius: 10px; /* Заоблени агли */
+  background-color: #fff; /* Бело позадина за подобар контраст */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Лесна сенка за длабочина */
+}
+
+.review:hover {
+  transform: scale(1.05); /* Лесно зголемување при поместување на маусот */
+  transition: transform 0.3s; /* Мазна транзиција */
+}
+
+/* Стилови за текстуалното поле за рецензија */
+#review-text {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  resize: none; /* Спречување на промена на големината */
+}
+
+/* Подобрен дизајн за прикажување на информациите за рецензијата */
+.review-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.review-info span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.review-info span.user {
+  font-weight: bold;
+  color: #000;
+}
+
+.review-info span.rating {
+  color: gold;
+}
+
+.review-info span.text {
+  color: #333;
+}
+
+.review-info span.date {
+  font-size: 0.8em;
+  color: #999;
+}
+
+/* Modal styles - REVIEW */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Maximum width */
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Контейнер за презентација и спецификации */
+.presentation-specification-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 2000px;
+  margin: 20px auto;
+  font-size: 1.1em;
+}
+
+/* Стилови за делот за презентација */
+.presentation-section {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+/* Стилови за делот за спецификации */
+.specification-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: left;
+}
+
+/* Стилови за насловите во деловите за презентација и спецификации */
+.presentation-section h2,
+.specification-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  position: relative;
+  text-align: center; /* Центрирање на насловот */
+}
+
+.presentation-section h2::after,
+.specification-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #e91e63; /* Можете да ја промените бојата по ваша желба */
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Стилови за делот за спецификации */
+.specification-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.specification-section li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.specification-section li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Стилови за инфо кутијата во фуснот */
+.dk-footer-box-info {
+    position: absolute;
+    top: -122px;
+    background: #202020;
+    padding: 20px; /* Намалено пополнување */
+    z-index: 2;
+    width: 100%; /* Осигурајте дека зазема целосна ширина */
+    max-width: 420px; /* Постави максимална ширина */
+    left: 8.3em;
+}
+
+/* Стилови за логото во фуснот */
+.dk-footer-box-info .footer-logo {
+    max-width: 150px; /* Прилагодена максимална ширина за логото */
+    margin-bottom: 10px; /* Намалено растојание */
+}
+
+
+.footer-widget {
+  max-width: 420px; /* Поставување на максимална ширина */
+  margin: 0 auto; /* Центрирање */
+}
+
+#footer-text{
+  margin-left: 5em;
+}
+
+/* Дополнителни стилови за ограничување на хоризонталното скролање */
+body {
+  overflow-x: hidden; /* Спречување на хоризонтално скролање */
+}
+
+
+

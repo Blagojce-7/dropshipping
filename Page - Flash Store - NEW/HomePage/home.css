@@ -1,0 +1,310 @@
+/* Стилови за навигационото мени */
+.navbar {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* Стилови за категоријата */
+#category {
+  padding: 5% 6%;
+}
+
+/* Стилови за картичките со производи */
+#product-cards {
+  padding: 5% 10%;
+}
+
+/* Стилови за подножјето (footer) */
+#footer {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+/* Центрирање на копчињата за филтрирање */
+.filter-btns {
+  text-align: center;
+}
+
+/* Стилови за копчињата за филтрирање */
+.filter-btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 10px 30px;
+  font-size: 16px;
+  color: #d3d3d3;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Стилови за линијата под копчињата */
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Промени на бојата при ховер */
+.filter-btn:hover {
+  color: #555;
+}
+
+/* Прикажи линија под копчињата при ховер */
+.filter-btn:hover::after {
+  width: 100%;
+}
+/* Копче за нагоре */
+.up-icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+  color: #f10303; 
+}
+/* Стилови за активните копчиња */
+.active-btn {
+  color: #555;
+}
+
+/* Прикажи линија под активните копчиња */
+.active-btn::after {
+  width: 100%;
+}
+
+/* Центрирање на насловите */
+.canvas-title {
+  text-align: center;
+}
+
+/* Стилови за онеспособени елементи */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Основни стилови за менито за подесувања */
+.settings-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Стилови за листата во менито за подесувања */
+.settings-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стилови за ставките во листата */
+.settings-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+/* Отстранување на линијата за последната ставка */
+.settings-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Стилови за линковите во менито за подесувања */
+.settings-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Промена на бојата при ховер на линковите */
+.settings-menu a:hover {
+  background-color: #f6f6f6;
+}
+
+/* Стилови за профил секцијата */
+#profileSection {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стилови за насловот во профил секцијата */
+#profileSection h2 {
+  margin-bottom: 20px;
+}
+
+/* Стилови за параграфите во профил секцијата */
+#profileSection p {
+  margin: 10px 0;
+}
+
+/* Центрирање на деловите за профил и промена на лозинка */
+#profileSection, #changePasswordSection {
+  width: 50%;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Стилови за модалниот прозорец */
+.modal {
+  display: none; /* Скриен по основа */
+  position: fixed; /* Останува фиксиран на екранот */
+  z-index: 1000; /* Излезен над сите други елементи */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Спречува скролање */
+  background-color: rgba(0,0,0,0.4); /* Фон со боја на сиво */
+}
+
+/* Стилови за содржината на модалниот прозорец */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Центрира модалниот прозорец */
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 80%; /* Помала ширина за подобар изглед */
+  max-width: 400px; /* Максимална ширина */
+  border-radius: 10px; /* Заоблени агли */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Сенка за подобар изглед */
+  text-align: center; /* Центриран текст */
+}
+
+/* Стилови за копчето за затворање на модалниот прозорец */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+/* Промени на бојата при ховер на копчето за затворање */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стилови за насловот во модалниот прозорец */
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Стилови за параграфите во модалниот прозорец */
+.modal-content p {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9; /* Боја за позадината */
+  border: 1px solid #ddd; /* Боја за границата */
+  border-radius: 5px; /* Заоблени агли */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Сенка за подобар изглед */
+  display: flex;
+  justify-content: space-between; /* Рамномерно распоредување на содржината */
+  align-items: center;
+}
+
+/* Стилови за етикетите во модалниот прозорец */
+.modal-content p strong {
+  color: #333; /* Боја за текстот на етикетата */
+  font-weight: bold;
+}
+
+/* Стилови за текстуалните полиња во модалниот прозорец */
+.modal-content p span {
+  color: #555; /* Боја за текстот на вредностите */
+}
+
+/* Стилови за етикетите во модалниот прозорец */
+.modal-content label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Стилови за текстуалните полиња во модалниот прозорец */
+.modal-content input {
+  width: 100%; /* Ширина на 100% за подобро изглед */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Стилови за копчињата во модалниот прозорец CHANGE PASSWORD*/
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Промени на бојата при ховер на копчињата */
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Стилови за копчињата со тип "button" */
+.modal-content button[type="button"] {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+/* Промени на бојата при ховер на копчињата со тип "button" */
+.modal-content button[type="button"]:hover {
+  background-color: #bbb;
+}
+
+/* Спречување на скролање на телото кога модалниот прозорец е отворен */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Стилови за квадратчето за прикажување на лозинката */
+.modal-content .password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Лево порамнување */
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Стилови за квадратчето во лозинката */
+.modal-content .password-toggle input[type="checkbox"] {
+  margin-right: 5px;
+  transform: scale(1.2); /* Зголемување на квадратчето */
+}
+
+.modal-content .password-toggle label {
+  margin: 0;
+  font-size: 14px; /* Подесување на големината на фонтот */
+}

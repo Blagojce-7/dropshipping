@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASH STORE</title>
+    <link rel="website icon" type="png" href="/HomePage/malo-logo.webp">
+    <link rel="stylesheet" href="/nav-bar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="home.css">
+        <!------ Footer bootstrap ------>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!------ -------------------- ------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!------ Google Fonts ------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<main>
+
+ <!-- Навигациска лента -->
+<nav class="navbar">
+  <div class="navbar-logo">
+      <!-- Лого на веб страната -->
+      <a href="/HomePage/home.html"><img src="/HomePage/FullLogo_Transparent_NoBuffer-(1).png" alt="Logo"></a>
+  </div>
+
+  <div class="navbar-search">
+      <!-- Поле за пребарување -->
+      <input type="text" id="searchInput" placeholder="Search..." style="width: 400px">
+      <a href="#Categories"><button type="submit">Search</button></a>
+  </div>
+
+  <div id="button-login">
+      <!-- Линк до шопинг кошничката -->
+      <a href="/Shoping-cart/shop-cart.html" style="color: mediumblue; position: relative;" class="disabled">
+          <img src="/HomePage/shopping-cart.png" alt="Shopping Cart" class="justify-content-end fa-xl">
+          <span id="cart-count" class="badge badge-light">0</span>
+      </a>
+
+      <!-- Профил на корисникот -->
+      <div id="user-profile" style="display: none;">
+          <span id="user-name"></span>
+      </div>
+      <!-- Копче за најава и регистрација -->
+      <div id="loginRegisterBtn">
+          <a href="/LogIn-Registar/log-reg.html" id="login-register-button2"><button class="button-85" role="button">Log In / Register</button></a>
+      </div>
+      <!-- Копче за подесувања -->
+      <div id="settingsBtn" style="display: none;">
+          <button id="settings-button" class="button-85" role="button">Settings</button>
+      </div>
+  </div>
+</nav>
+
+<!-- Мени за подесувања -->
+<div id="settingsMenu" class="settings-menu" style="display: none;">
+  <ul>
+      <li><a href="#" id="profileLink">Profile</a></li>
+      <li><a href="#" id="changePasswordLink">Change Password</a></li>
+      <li><a href="#" id="deactivateAccountLink">Deactivate Account</a></li>
+      <li><a href="#" id="logoutLink">Logout</a></li>
+  </ul>
+</div>
+
+<!-- Модален прозорец за прикажување на профил информации -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeProfileModal">&times;</span>
+      <h2>Your Profile</h2>
+      <p><strong>First Name:</strong> <span id="profileFirstName"></span></p>
+      <p><strong>Last Name:</strong> <span id="profileLastName"></span></p>
+      <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+      <p><strong>Gender:</strong> <span id="profileGender"></span></p>
+      <p><strong>Spend Time:</strong> <span id="profileSpendTime"></span></p>
+      <p><strong>Last Login:</strong> <span id="profileLastLogin"></span></p>
+  </div>
+</div>
+
+<!-- Модален прозорец за промена на лозинка -->
+<div id="changePasswordModal" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeChangePasswordModal">&times;</span>
+      <h2>Change Password</h2>
+      <form id="changePasswordForm">
+          <label for="currentPasswordChange">Current Password:</label>
+          <input type="password" id="currentPasswordChange" name="currentPassword" required>
+          <label for="newPasswordChange">New Password:</label>
+          <input type="password" id="newPasswordChange" name="newPassword" required>
+          <div class="password-toggle">
+              <p id="show-pw">Show Password<input type="checkbox" id="showPasswordCheckbox"></p>
+              <!-- <label id="showPasswordCheckbox" for="showPasswordCheckbox">Show Password</label> -->
+          </div>
+          <button type="submit">Confirm</button>
+      </form>
+  </div>
+</div>
+
+<!-- Секција за потврда за деактивација на акаунт -->
+<div id="deactivateModal" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeDeactivateModal">&times;</span>
+      <h2>Deactivate Account</h2>
+      <form id="deactivateAccountForm">
+          <p>Are you sure you want to deactivate your account?</p>
+          <label for="deactivationEmail">Email:</label>
+          <input type="email" id="deactivationEmail" name="email" required readonly>
+          <label for="deactivationPassword">Password:</label>
+          <input type="password" id="deactivationPassword" name="password" required>
+          <button type="submit">Confirm</button>
+          <button type="button" id="cancelDeactivationButton">Cancel</button>
+      </form>
+  </div>
+</div>
+
+<!----------------------------------------------------------------------------------->
+
+ 
+
+<!----------------------------------------------------------------------------------->
+<!--Filter Button-->
+<div class = "filter-btns">
+  <a href="/HomePage/home.html"><button type="button" class="filter-btn" id="refresh"><i class="fa-solid fa-rotate" ></i> Refresh</button></a>
+   
+  <button type = "button" class = "filter-btn" id = "all">All</button>
+  <button type = "button" class = "filter-btn" id = "Jewellery">Jewellery</button>
+  <button type = "button" class = "filter-btn" id = "gardening-tools">Gardening Tools</button>
+  <button type = "button" class = "filter-btn" id = "kitchen-equipment">Kitchen Equipment</button>
+  <button type = "button" class = "filter-btn" id = "toys">Toys</button>
+</div>
+
+
+<!--Product Cards-->
+<section id="product-cards">
+  <div class="container-fluid">
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+
+ <!-- Пример за структура на производи -->
+  <div class="col filter-item all Jewellery">
+    <div class="card h-100">
+      <img src="/img/jewellery/duo-ring/duoring1.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title shop-item-title">DUO RING</h5>
+        <p class="card-text shop-item-price">Price: 254.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=1"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button add-to-cart" data-id="1">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button><br><br>
+      </div>
+    </div>
+  </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/geometric dangle drop earrings/geometric-dangle-drop.jpg" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">GEOMETRIC DANGLE DROP EARRINGS</h5>
+              <p class="card-text shop-item-price">Price: 6000.00€</p>
+              <a href="/MoreDetails/moredetails.html?productId=2"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/pearl-hoops/organicpearlhoops.jpg" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">LUSTER PEARL HOOP EARRINGS</h5>
+              <p class="card-text shop-item-price">Price: 30.99€</p>
+              <a href="/MoreDetails/moredetails.html?productId=3"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br> 
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/minimal-modern-bracelet/minimalmodernbracelet.jpg" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">MINIMAL MODERN BRACELET</h5>
+              <p class="card-text shop-item-price">Price: 1500.00€</p>
+              <a href="/MoreDetails/moredetails.html?productId=4"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/radiant-floral-diamond-mangalsutra.webp" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">RADIANT FLORAL DIAMOND MANGALSUTRA</h5>
+              <p class="card-text shop-item-price">Price: 3300.00€</p>
+              <a href="/MoreDetails/moredetails.html?productId=5"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/seashell-pearl-bangle.webp" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">SEASHELL PEARL BANGLE</h5>
+              <p class="card-text shop-item-price">Price: 3475.00€</p>
+              <a href="/MoreDetails/moredetails.html?productId=6"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col filter-item all Jewellery">
+          <div class="card h-100">
+            <img src="/img/jewellery/small-hoops.webp" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">SMALL HOOPS</h5>
+              <p class="card-text shop-item-price">Price: 44.99€</p>
+              <a href="/MoreDetails/moredetails.html?productId=7"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+                <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+              </button></a> <br>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+                <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+      <!----------------------------- GARDENING TOOLS --------------------------------->
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/roller-moss-removal-rake.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF ROLLER MOSS REMOVAL RAKE</h5>
+        <p class="card-text shop-item-price">Price: 40.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=8"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/soil-rake.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF SOIL RAKE</h5>
+        <p class="card-text shop-item-price">Price: 15.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=9"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/wilkinson-sword-3-prong.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WILKINSON SWORD 3 PRONG CULTIVATOR</h5>
+        <p class="card-text shop-item-price">Price: 15.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=10"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/wilkinson-sword-ultralight-shovel.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WILKINSON SWORD ULTRALIGHT SHOVEL</h5>
+        <p class="card-text shop-item-price">Price: 65.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=11"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/window-wiper.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF WINDOW WIPER</h5>
+        <p class="card-text shop-item-price">Price: 18.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=12"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/wolf-adjustable-anvil.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF ADJUSTABLE ANVIL TREE LOPPER</h5>
+        <p class="card-text shop-item-price">Price: 45.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=13"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/wolf-lawn-edge-trimmer.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF LAWN EDGE TRIMMER</h5>
+        <p class="card-text shop-item-price">Price: 50.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=14"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col filter-item all gardening-tools">
+    <div class="card h-100">
+      <img src="/img/gardening-tools/wolf-telescopic-anvil-loppers.webp" class="card-img-top shop-item-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title shop-item-title">WOLF TELESCOPIC ANVIL LOPPERS</h5>
+        <p class="card-text shop-item-price">Price: 70.99€</p>
+        <a href="/MoreDetails/moredetails.html?productId=15"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+          <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+        </button></a> <br>
+        <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+          <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+<!----------------------------- KITCHEN EQUIPMENT --------------------------------->
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/analogue-controller.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">ANALOGUE THERMOCONTROLLER</h5>
+      <p class="card-text shop-item-price">Price: 25.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=16"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/casserole-2.0l-16cm-with-lid.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">POT, 7.0 L, Ø 24CM, H. 16.5CM WITH LID</h5>
+      <p class="card-text shop-item-price">Price: 275.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=17"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/cobalt-royal-porcelain.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">COBALT ROYAL - COMPLETE PORCELAIN 68 PIECES</h5>
+      <p class="card-text shop-item-price">Price: 300.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=18"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/coral-12-set-for-6-person.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">CORAL - 12 PC COFFEE SET FOR 6 PERSONS</h5>
+      <p class="card-text shop-item-price">Price: 78.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=19"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/espresso-pot-kitty-2.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">ESPRESSO POT KITTY 2 CUP S</h5>
+      <p class="card-text shop-item-price">Price: 74.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=20"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/felix-cutting-board.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">FELIX CUTTING BOARD 20x29cm</h5>
+      <p class="card-text shop-item-price">Price: 25.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=21"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/kettle-2.4l.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">KETTLE 2.4 L</h5>
+      <p class="card-text shop-item-price">Price: 200.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=22"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/kitchen-paring-knife-solingen-12cm.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">KITCHEN PARING KNIFE SOLINGEN FELIX (12 cm blade)</h5>
+      <p class="card-text shop-item-price">Price: 73.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=23"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/kitchen-shears-stainless.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">KITCHEN SHEARS, STAINLESS STEEL</h5>
+      <p class="card-text shop-item-price">Price: 38.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=24"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/magic-harmony-crystal.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">MAGIC HARMONY CRYSTAL & STAINLESS STEEL</h5>
+      <p class="card-text shop-item-price">Price: 95.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=25"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/magnetic-stand-knife.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">MAGNETIC KNIFE STAND, SOLID WALNUT</h5>
+      <p class="card-text shop-item-price">Price: 24.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=26"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all kitchen-equipment">
+  <div class="card h-100">
+    <img src="/img/kitchen/masterpiece-coockware.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">MASTERPIECE COOKWARE Z SET - GRANDE</h5>
+      <p class="card-text shop-item-price">Price: 499.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=27"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!----------------------------- TOYS --------------------------------->
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/batman-adventures-16armor.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">BATMAN ADVENTURES 12" COLLECTIBLE ACTION FIGURE</h5>
+      <p class="card-text shop-item-price">Price: 20.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=28"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/disney-junior-minnie-mouse.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">DISNEY JUNIOR MINNIE MOUSE BUTTERFLY BALLERINA PLUSH</h5>
+      <p class="card-text shop-item-price">Цена: 39.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=29"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/fisher-price-thomas.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">FISHER-PRICE THOMAS & FRIENDS WOODEN RAILWAY</h5>
+      <p class="card-text shop-item-price">Price: 15.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=30"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/gb-furious-challenger-electric.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">GB FURIOUS CHALLENGER ELECTRIC POWER ROAD RACING</h5>
+      <p class="card-text shop-item-price">Price: 70.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=31"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/hot-wheels-marvel-wood-car.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">HOT WHEELS MARVEL WOOD CAR RACERS DIY KIT</h5>
+      <p class="card-text shop-item-price">Price: 15.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=32"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/kid-galaxy-20v-power.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">KID GALAXY 20V POWER DRIVE HIGH SPEED</h5>
+      <p class="card-text shop-item-price">Price: 149.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=33"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col filter-item all toys">
+  <div class="card h-100">
+    <img src="/img/toys/lego-harry-potter-2.660pieces.webp" class="card-img-top shop-item-image" alt="...">
+    <div class="card-body">
+      <h5 class="card-title shop-item-title">LEGO HARRY POTTER HOGWARTS CASTLE 2,660 PIECES</h5>
+      <p class="card-text shop-item-price">Price: 119.99€</p>
+      <a href="/MoreDetails/moredetails.html?productId=34"><button type="button" style="width: 100%;" class="btn btn-secondary mt-2">
+        <i class="fa-solid fa-info-circle" style="margin-right: 4%;"></i>More Details
+      </button></a> <br>
+      <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 4%;"></i>Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+      </div>
+        </div>
+  </section>
+
+<!-- ERROR MESSAGE WHEN NOT FOUND PRODUCT-->
+<div id="not-found" style="display: none;">
+  <p>No items found</p>
+</div>
+
+
+ 
+<!--Footer-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<footer id="dk-footer" class="dk-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="dk-footer-box-info">
+                    <a href="/HomePage/home.html" class="footer-logo">
+                        <img src="/HomePage/IconOnly_Transparent_NoBuffer.png" alt="footer_logo" class="img-fluid">
+                    </a>
+                    <p class="footer-info-text">
+                        Urban Vibe Store offers trendy and unique fashion for modern urban lifestyles. Discover stylish clothing, accessories, and footwear that reflect the latest trends and timeless classics.
+                    </p>
+                    <div class="footer-social-link">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-awarad">
+                    <img src="images/icon/best.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-us">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Country: Macedonia</h3>
+                                <h3>City: SKOPJE</h3>
+                                <p class="footer-info-text">Adress: Blagoja Stefkovski br.18</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-us">
+                            <div class="contact-icon">
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>+38979209882</h3>
+                                <p class="footer-info-text">Give us a call</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget footer-left-widget">
+                          <div class="section-heading">
+                              <h3>Useful Links</h3>
+                              <span class="animate-border border-black"></span>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#">About us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Services</a>
+                              </li>
+                              <li>
+                                  <a href="#">Projects</a>
+                              </li>
+                              <li>
+                                  <a href="#">Our Team</a>
+                              </li>
+                          </ul>
+                          <ul>
+                              <li>
+                                  <a href="#">Contact us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="#">Testimonials</a>
+                              </li>
+                              <li>
+                                  <a href="#">Faq</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                    <div class="col-lg-6">
+                        <div class="footer-widget">
+                            <div class="section-heading">
+                                <h3>Subscribe</h3>
+                                <span class="animate-border border-black"></span>
+                            </div>
+                            <p class="footer-info-text">Subscribe to our newsletter and be the first to know about the latest news, special offers, and exclusive discounts! Don't miss out on any updates from Urban Vibe Store. Subscribe now and stay tuned for all our exciting news!</p>
+                            <form action="#">
+                              <div class="col dk-footer-form">
+                                <form onsubmit="return false;">
+                                    <input type="email" id="email" class="form-control" placeholder="Email Address">
+                                    <button type="submit" onclick="subscribe(event)"><i class="fa fa-send"></i></button>
+                                </form>
+                            </div>
+                            <div class="message" id="message">Thank you for subscribing! You'll now receive updates from Urban Vibe Store.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Copyright © 2019, All Right Reserved Blagojce Ivanov</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#category" class="up-icon"><i class="fa-solid fa-circle-chevron-up"></i></a>
+</main>
+
+</body>
+
+<!-- Skript za footer -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Script za home page  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/9d9796826b.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="home.js"></script>
+</html>
