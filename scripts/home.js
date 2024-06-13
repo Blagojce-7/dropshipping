@@ -91,7 +91,7 @@ function updateCartCount() {
     var cartCountElement = document.getElementById('cart-count');
     cartCountElement.innerText = cartItems.length;
 
-    var cartLink = document.querySelector('.navbar a[href="/shop-cart.html"]');
+    var cartLink = document.querySelector('.navbar a[href="https://blagojce-7.github.io/dropshipping/shop-cart.html"]');
     if (cartItems.length > 0) {
         cartLink.classList.remove('disabled');
     } else {

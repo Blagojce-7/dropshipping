@@ -211,7 +211,7 @@ function loadProductDetails() {
       9: {
         title: "WOLF SOIL RAKE",
         price: "15.99€",
-        image: "/images/soil-rake.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/soil-rake.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -224,7 +224,7 @@ function loadProductDetails() {
       10: {
         title: "WILKINSON SWORD 3 PRONG CULTIVATOR",
         price: "15.99€",
-        image: "/images/wilkinson-sword-3-prong.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/wilkinson-sword-3-prong.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -237,7 +237,7 @@ function loadProductDetails() {
       11: {
         title: "WILKINSON SWORD ULTRALIGHT SHOVEL",
         price: "65.99€",
-        image: "/images/wilkinson-sword-ultralight-shovel.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/wilkinson-sword-ultralight-shovel.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -250,7 +250,7 @@ function loadProductDetails() {
       12: {
         title: "WOLF WINDOW WIPER",
         price: "18.99€",
-        image: "/images/window-wiper.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/window-wiper.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -263,7 +263,7 @@ function loadProductDetails() {
       13: {
         title: "WOLF ADJUSTABLE ANVIL TREE LOPPER",
         price: "45.99€",
-        image: "/images/wolf-adjustable-anvil.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/wolf-adjustable-anvil.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -276,7 +276,7 @@ function loadProductDetails() {
       14: {
         title: "WOLF LAWN EDGE TRIMMER",
         price: "50.99€",
-        image: "/images/wolf-lawn-edge-trimmer.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/wolf-lawn-edge-trimmer.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -289,7 +289,7 @@ function loadProductDetails() {
       15: {
         title: "WOLF TELESCOPIC ANVIL LOPPERS",
         price: "70.99€",
-        image: "/images/wolf-telescopic-anvil-loppers.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/wolf-telescopic-anvil-loppers.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -302,7 +302,7 @@ function loadProductDetails() {
       16: {
         title: "ANALOGUE THERMOCONTROLLER",
         price: "25.99€",
-        image: "/images/analogue-controller.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/analogue-controller.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -315,7 +315,7 @@ function loadProductDetails() {
       17: {
         title: "POT, 7.0 L, Ø 24CM, H. 16.5CM WITH LID",
         price: "275.99€",
-        image: "/images/casserole-2.0l-16cm-with-lid.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/casserole-2.0l-16cm-with-lid.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -328,7 +328,7 @@ function loadProductDetails() {
       18: {
         title: "COBALT ROYAL - COMPLETE PORCELAIN 68 PIECES",
         price: "300.99€",
-        image: "/images/cobalt-royal-porcelain.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/cobalt-royal-porcelain.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -341,7 +341,7 @@ function loadProductDetails() {
       19: {
         title: "CORAL - 12 PC COFFEE SET FOR 6 PERSONS",
         price: "78.99€",
-        image: "/images/coral-12-set-for-6-person.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/coral-12-set-for-6-person.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -354,7 +354,7 @@ function loadProductDetails() {
       20: {
         title: "ESPRESSO POT KITTY 2 CUP S",
         price: "74.99€",
-        image: "/images/espresso-pot-kitty-2.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/espresso-pot-kitty-2.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -367,7 +367,7 @@ function loadProductDetails() {
       21: {
         title: "FELIX CUTTING BOARD 20x29cm",
         price: "25.99€",
-        image: "/images/felix-cutting-board.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/felix-cutting-board.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -380,7 +380,7 @@ function loadProductDetails() {
       22: {
         title: "KETTLE 2.4 L",
         price: "200.99€",
-        image: "/images/kettle-2.4l.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/kettle-2.4l.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -393,7 +393,7 @@ function loadProductDetails() {
       23: {
         title: "KITCHEN PARING KNIFE SOLINGEN FELIX (12 cm blade)",
         price: "73.99€",
-        image: "/images/kitchen-paring-knife-solingen-12cm.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/kitchen-paring-knife-solingen-12cm.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -406,7 +406,7 @@ function loadProductDetails() {
       24: {
         title: "KITCHEN SHEARS, STAINLESS STEEL",
         price: "38.99€",
-        image: "/images/kitchen-shears-stainless.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/kitchen-shears-stainless.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -419,7 +419,7 @@ function loadProductDetails() {
       25: {
         title: "MAGIC HARMONY CRYSTAL & STAINLESS STEEL",
         price: "95.99€",
-        image: "/images/magic-harmony-crystal.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/magic-harmony-crystal.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -432,7 +432,7 @@ function loadProductDetails() {
       26: {
         title: "MAGNETIC KNIFE STAND, SOLID WALNUT",
         price: "24.99€",
-        image: "/images/magnetic-stand-knife.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/magnetic-stand-knife.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -445,7 +445,7 @@ function loadProductDetails() {
       27: {
         title: "MASTERPIECE COOKWARE Z SET - GRANDE",
         price: "499.99€",
-        image: "/images/masterpiece-coockware.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/masterpiece-coockware.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -458,7 +458,7 @@ function loadProductDetails() {
       28: {
         title: "BATMAN ADVENTURES 12\" COLLECTIBLE ACTION FIGURE",
         price: "20.99€",
-        image: "/images/batman-adventures-16armor.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/batman-adventures-16armor.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -471,7 +471,7 @@ function loadProductDetails() {
       29: {
         title: "DISNEY JUNIOR MINNIE MOUSE BUTTERFLY BALLERINA PLUSH",
         price: "39.99€",
-        image: "/images/disney-junior-minnie-mouse.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/disney-junior-minnie-mouse.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -484,7 +484,7 @@ function loadProductDetails() {
       30: {
         title: "FISHER-PRICE THOMAS & FRIENDS WOODEN RAILWAY",
         price: "15.99€",
-        image: "/images/fisher-price-thomas.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/fisher-price-thomas.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -497,7 +497,7 @@ function loadProductDetails() {
       31: {
         title: "GB FURIOUS CHALLENGER ELECTRIC POWER ROAD RACING",
         price: "70.99€",
-        image: "/images/gb-furious-challenger-electric.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/gb-furious-challenger-electric.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -510,7 +510,7 @@ function loadProductDetails() {
       32: {
         title: "HOT WHEELS MARVEL WOOD CAR RACERS DIY KIT",
         price: "15.99€",
-        image: "/images/hot-wheels-marvel-wood-car.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/hot-wheels-marvel-wood-car.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -523,7 +523,7 @@ function loadProductDetails() {
       33: {
         title: "KID GALAXY 20V POWER DRIVE HIGH SPEED",
         price: "149.99€",
-        image: "/images/kid-galaxy-20v-power.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/kid-galaxy-20v-power.webp",
         description: "These Luster Pearl Hoop Earrings feature radiant pearls set in elegant hoops, perfect for adding a touch of sophistication to any outfit. Handcrafted with meticulous attention to detail, these earrings offer timeless beauty and style.",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
@@ -536,7 +536,7 @@ function loadProductDetails() {
       34: {
         title: "LEGO HARRY POTTER HOGWARTS CASTLE 2,660 PIECES",
         price: "119.99€",
-        image: "/images/lego-harry-potter-2.660pieces.webp",
+        image: "https://blagojce-7.github.io/dropshipping/images/lego-harry-potter-2.660pieces.webp",
         description: "asdad",
         thumbnails: [
           "https://blagojce-7.github.io/dropshipping/images/radiant-floral-diamond-mangalsutra.webp",
