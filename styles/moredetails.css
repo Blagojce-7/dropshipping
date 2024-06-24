@@ -61,20 +61,20 @@ body {
 }
 
 #product-description {
-  font-size: 1.1em; /* Намалување на големината на фонтот */
-  line-height: 1.4; /* Поставување на соодветен размак помеѓу редовите за полесно читање */
-  max-width: 600px; /* Ограничување на максималната ширина за да не биде премногу долг текстот */
-  word-wrap: break-word; /* Автоматско префрлање на нов ред ако е потребно */
-  margin: 0; /* Центрирање на текстот во родителскиот елемент */
-  padding: 10px; /* Додавање на внатрешен размак за полесно читање */
+  font-size: 1.1em; /* Reduced font size */
+  line-height: 1.4; /* Set appropriate line height for better readability */
+  max-width: 600px; /* Limit maximum width to avoid overly long text */
+  word-wrap: break-word; /* Automatically wrap text if necessary */
+  margin: 0; /* Center text within parent element */
+  padding: 10px; /* Add padding for better readability */
 }
 
-/* Стилови за насловот на производите */
+/* Styles for product titles */
 .product-title {
-  font-size: 2em; /* Поставување на помал фонт */
-  font-weight: normal; /* Ако сакате фонтот да не биде подебел */
-  color: #333; /* Можете да ја промените бојата ако сакате */
-  margin-bottom: 20px; /* Простор под насловот */
+  font-size: 2em; /* Set smaller font size */
+  font-weight: normal; /* Set font weight to normal */
+  color: #333; /* Change color if desired */
+  margin-bottom: 20px; /* Space below the title */
 }
 
 .product-details {
@@ -98,7 +98,7 @@ body {
 }
 
 .thumbnail-container {
-  display: none; /* Скриј ги минијатурите */
+  display: none; /* Hide thumbnails */
 }
 
 .navigation-arrows {
@@ -150,23 +150,20 @@ p {
 }
 
 .info-icon {
-  width: 30px; /* Прилагодете ја ширината на иконата */
-  height: 30px; /* Прилагодете ја висината на иконата */
+  width: 30px; /* Adjust icon width */
+  height: 30px; /* Adjust icon height */
   margin-right: 10px;
 }
 
-
-
-
-/* Стилови за текстот со цената */
+/* Styles for the price text */
 #product-price {
-    font-size: 1.3em; /* Поголем фонт */
-    font-weight: bold; /* Подебели букви */
-    color: #d81b60; /* Боја на текстот за цената */
+    font-size: 1.3em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #d81b60; /* Text color for the price */
     display: inline-block;
     padding: 3px;
-    border: 2px solid #e91e63; /* Боја на обележувањето */
-    border-radius: 5px; /* Заоблени агли */
+    border: 2px solid #e91e63; /* Border color */
+    border-radius: 5px; /* Rounded corners */
 }
 
 button {
@@ -201,45 +198,45 @@ button:active {
   background-color: #4e555b;
 }
 
-/* Стилови за ѕвездите за рецензија */
+/* Styles for review stars */
 .star {
   font-size: 1.5em;
   cursor: pointer;
   color: lightgray;
-  transition: color 0.3s, transform 0.3s; /* Додадени транзиции за мазни анимации */
+  transition: color 0.3s, transform 0.3s; /* Added transitions for smooth animations */
 }
 
 .star:hover,
 .star.selected {
   color: gold;
-  transform: scale(1.2); /* Зголемување при селектирање или кога е под маусот */
+  transform: scale(1.2); /* Increase size on hover or selection */
 }
 
-/* Стилови за секцијата за рецензии */
+/* Styles for the review section */
 .review-section,
 .review-list-section {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f8f9fa; /* Светло сива позадина за секцијата */
-  border-radius: 10px; /* Заоблени агли */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Лесна сенка за длабочина */
+  background-color: #f8f9fa; /* Light gray background for the section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .review-list-section h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
   color: #444;
-  border-bottom: 2px solid #e91e63; /* Линија под насловот */
-  padding-bottom: 10px; /* Простор под насловот */
+  border-bottom: 2px solid #e91e63; /* Line under the title */
+  padding-bottom: 10px; /* Space below the title */
 }
 
-/* Дополнителни стилови за секцијата за рецензии */
+/* Additional styles for the review section */
 .review-section h2,
 .review-list-section h2 {
   font-size: 1.8em;
   color: #333;
   margin-bottom: 15px;
-  text-align: center; /* Центриран текст за насловите */
+  text-align: center; /* Center text for titles */
   position: relative;
 }
 
@@ -254,27 +251,27 @@ button:active {
   border-radius: 5px;
 }
 
-/* Стилови за рецензии */
+/* Styles for reviews */
 .review {
-  border: 2px solid red; /* Црвена линија околу сите четири страни */
+  border: 2px solid red; /* Red border around all sides */
   padding: 10px;
-  display: inline-block; /* Рецензиите една до друга */
-  vertical-align: top; /* Усогласување на рецензиите на врвот */
-  margin-right: 10px; /* Простор меѓу рецензиите */
-  margin-bottom: 10px; /* Простор под рецензиите */
-  width: calc(33.33% - 20px); /* Пример за ширина од 33.33% за три колони */
-  box-sizing: border-box; /* За правилно изразување на ширината со вклучени маргини и падинзи */
-  border-radius: 10px; /* Заоблени агли */
-  background-color: #fff; /* Бело позадина за подобар контраст */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Лесна сенка за длабочина */
+  display: inline-block; /* Reviews side by side */
+  vertical-align: top; /* Align reviews at the top */
+  margin-right: 10px; /* Space between reviews */
+  margin-bottom: 10px; /* Space below reviews */
+  width: calc(33.33% - 20px); /* Example width of 33.33% for three columns */
+  box-sizing: border-box; /* Ensure proper width calculation with margins and padding */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* White background for better contrast */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .review:hover {
-  transform: scale(1.05); /* Лесно зголемување при поместување на маусот */
-  transition: transform 0.3s; /* Мазна транзиција */
+  transform: scale(1.05); /* Slight increase on hover */
+  transition: transform 0.3s; /* Smooth transition */
 }
 
-/* Стилови за текстуалното поле за рецензија */
+/* Styles for the review text field */
 #review-text {
   width: 100%;
   max-width: 300px;
@@ -284,10 +281,10 @@ button:active {
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 1em;
-  resize: none; /* Спречување на промена на големината */
+  resize: none; /* Prevent resizing */
 }
 
-/* Подобрен дизајн за прикажување на информациите за рецензијата */
+/* Improved design for displaying review information */
 .review-info {
   font-size: 0.9em;
   color: #555;
@@ -327,7 +324,7 @@ button:active {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.4); /* Black with opacity */
 }
 
 .modal-content {
@@ -354,8 +351,7 @@ button:active {
   cursor: pointer;
 }
 
-
-/* Контейнер за презентација и спецификации */
+/* Container for presentation and specifications */
 .presentation-specification-container {
   display: flex;
   justify-content: space-between;
@@ -366,7 +362,7 @@ button:active {
   font-size: 1.1em;
 }
 
-/* Стилови за делот за презентација */
+/* Styles for the presentation section */
 .presentation-section {
   flex: 2;
   background-color: #f9f9f9;
@@ -376,7 +372,7 @@ button:active {
   max-width: 1200px;
 }
 
-/* Стилови за делот за спецификации */
+/* Styles for the specification section */
 .specification-section {
   flex: 1;
   background-color: #f9f9f9;
@@ -387,13 +383,13 @@ button:active {
   text-align: left;
 }
 
-/* Стилови за насловите во деловите за презентација и спецификации */
+/* Styles for titles in the presentation and specification sections */
 .presentation-section h2,
 .specification-section h2 {
   margin-bottom: 15px;
   font-size: 1.8em;
   position: relative;
-  text-align: center; /* Центрирање на насловот */
+  text-align: center; /* Center the title */
 }
 
 .presentation-section h2::after,
@@ -401,13 +397,13 @@ button:active {
   content: '';
   width: 50px;
   height: 3px;
-  background: #e91e63; /* Можете да ја промените бојата по ваша желба */
+  background: #e91e63; /* Change color as desired */
   display: block;
   margin: 10px auto 0;
   border-radius: 5px;
 }
 
-/* Стилови за делот за спецификации */
+/* Styles for the specification section */
 .specification-section ul {
   list-style-type: none;
   padding: 0;
@@ -427,167 +423,165 @@ button:active {
   font-weight: bold;
 }
 
-/* Стилови за инфо кутијата во фуснот */
+/* Styles for the info box in the footer */
 .dk-footer-box-info {
-    position: absolute;
-    top: -122px;
-    background: #202020;
-    padding: 20px; /* Намалено пополнување */
-    z-index: 2;
-    width: 100%; /* Осигурајте дека зазема целосна ширина */
-    max-width: 420px; /* Постави максимална ширина */
-    left: 8.3em;
+  position: absolute;
+  top: -122px;
+  background: #202020;
+  padding: 20px; /* Reduced padding */
+  z-index: 2;
+  width: 100%; /* Ensure full width */
+  max-width: 420px; /* Set maximum width */
+  left: 8.3em;
 }
 
-/* Стилови за логото во фуснот */
+/* Styles for the logo in the footer */
 .dk-footer-box-info .footer-logo {
-    max-width: 150px; /* Прилагодена максимална ширина за логото */
-    margin-bottom: 10px; /* Намалено растојание */
+  max-width: 150px; /* Adjusted max width for the logo */
+  margin-bottom: 10px; /* Reduced spacing */
 }
-
 
 .footer-widget {
-  max-width: 420px; /* Поставување на максимална ширина */
-  margin: 0 auto; /* Центрирање */
+  max-width: 420px; /* Set max width */
+  margin: 0 auto; /* Center */
 }
 
-#footer-text{
+#footer-text {
   margin-left: 5em;
 }
 
-/* Дополнителни стилови за ограничување на хоризонталното скролање */
+/* Additional styles to prevent horizontal scrolling */
 body {
-  overflow-x: hidden; /* Спречување на хоризонтално скролање */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
 
 /* MOBILE RESP */
 
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      padding: 5px;
+    flex-direction: column;
+    padding: 5px;
   }
 
   .cart-link {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
 
   .container {
-      width: 100%;
-      padding: 10px;
+    width: 100%;
+    padding: 10px;
   }
 
   .product-details {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .product-images {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .product-images img {
-      width: 100%;
-      height: auto;
-      max-width: 300px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
   }
 
   .product-info {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
   }
 
   h1 {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 
   p {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
 
   .additional-info {
-      align-items: center;
+    align-items: center;
   }
 
   .info-item {
-      margin-top: 5px;
+    margin-top: 5px;
   }
 
   .info-icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
   }
 
   .review-section,
   .review-list-section {
-      padding: 10px;
-      margin-top: 10px;
+    padding: 10px;
+    margin-top: 10px;
   }
 
   .review {
-      width: 100%;
-      margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .presentation-specification-container {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
 
   .presentation-section,
   .specification-section {
-      width: 100%;
-      margin-bottom: 20px;
-      max-width: none;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: none;
   }
 
   .dk-footer-box-info {
-      position: static;
-      margin: 20px auto;
-      width: 90%;
-      max-width: none;
-      left: auto;
-      top: auto;
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+    max-width: none;
+    left: auto;
+    top: auto;
   }
 
   .footer-widget {
-      width: 90%;
-      max-width: none;
-      margin: 20px auto;
+    width: 90%;
+    max-width: none;
+    margin: 20px auto;
   }
 
   #footer-text {
-      margin-left: 0;
-      text-align: center;
+    margin-left: 0;
+    text-align: center;
   }
 
   .review-section h2,
   .review-list-section h2 {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
 
   .modal-content {
-      width: 90%;
-      margin: 20% auto;
-      padding: 20px;
+    width: 90%;
+    margin: 20% auto;
+    padding: 20px;
   }
 
   .close {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .social-container {
-      flex-direction: column;
-      gap: 5px;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .social-container a {
-      height: 30px;
-      width: 30px;
+    height: 30px;
+    width: 30px;
   }
 }
