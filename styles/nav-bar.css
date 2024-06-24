@@ -265,7 +265,7 @@
   }
 
   .navbar-search input {
-    width: calc(100% - 55px); /* Намалено за 50% */
+    width: calc(100% - 55px); 
     margin-right: -5px;
     border-radius: 5px 0 0 5px;
   }
@@ -282,9 +282,9 @@
   }
 
   .button-85 {
-    width: 100%; /* Подолго и пошироко */
+    width: 100%; 
     text-align: center;
-    padding: 12px; /* Повеќе padding */
+    padding: 12px;
     font-size: 16px;
   }
 
@@ -343,13 +343,13 @@
     height: auto;
   }
 
-  /* Копче за подесувања */
+ 
   .settings-menu {
     top: 30px;
-    left: 5%; /* Преместено малку налево */
+    left: 5%; 
     width: 90%;
-    padding: 12px; /* Повеќе padding */
-    font-size: 16px; /* Зголемена големина */
+    padding: 12px; 
+    font-size: 16px; 
     text-align: center;
   }
 
