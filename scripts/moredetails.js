@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   loadProductDetails();
   updateCartCount();
-  updateRemoveButtonState(); // Ажурирање на состојбата на копчето при вчитување на страницата
+  updateRemoveButtonState(); // Update the state of the button when the page loads
 
   let currentImageIndex = 0;
   const thumbnails = document.querySelectorAll('.thumbnails img');
@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
           if (i === index) {
               thumb.classList.add('active');
               productImage.src = thumb.src;
-              productImage.style.width = '500px'; // Поставување на фиксна ширина
-              productImage.style.height = '500px'; // Поставување на фиксна висина
-              productImage.style.objectFit = 'cover'; // Задржување на пропорциите
-              productImage.style.borderRadius = '10px'; // Заоблување на аглите
-              productImage.style.display = 'block'; // Прикажување на активната слика
+              productImage.style.width = '500px'; // Set a fixed width
+              productImage.style.height = '500px'; // Set a fixed height
+              productImage.style.objectFit = 'cover'; // Maintain proportions
+              productImage.style.borderRadius = '10px'; // Round the corners
+              productImage.style.display = 'block'; // Display the active image
           } else {
               thumb.classList.remove('active');
           }
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       updateActiveImage(currentImageIndex);
   });
 
-  // Иницијално поставување на првата слика како активна
+  // Initially set the first image as active
   if (thumbnails.length > 0) {
       updateActiveImage(0);
   }
@@ -548,14 +548,6 @@ function loadProductDetails() {
       },
     };
 
-    
-
-    
-
-
- 
-  
-
     const product = products[productId];
 
     if (product) {
@@ -565,130 +557,130 @@ function loadProductDetails() {
         document.getElementById('product-description').innerText = product.description;
         document.getElementById('product-presentation').innerHTML = product.presentation;
         document.getElementById('product-specification').innerHTML = product.specification;
-
+    
         const thumbnailContainer = document.querySelector('.thumbnail-container .thumbnails');
         thumbnailContainer.innerHTML = '';
-
+    
         product.thumbnails.forEach(src => {
             const img = document.createElement('img');
             img.classList.add('thumbnail');
             img.src = src;
             img.alt = 'Thumbnail';
             thumbnailContainer.appendChild(img);
-
+    
             img.addEventListener('click', function () {
                 document.getElementById('product-image').src = this.src;
             });
         });
-
+    
         document.getElementById('add-to-cart-button').onclick = function() {
             addItemToCart(productId, product.title, product.price, product.image);
         };
-
+    
         document.getElementById('remove-from-cart-button').onclick = function() {
             removeItemFromCart(productId);
         };
-
-        // Проверка дали производот веќе е во кошничката и ажурирање на состојбата на копчињата
+    
+        // Check if the product is already in the cart and update the button states
         updateRemoveButtonState();
     } else {
         document.getElementById('product-details').innerText = "Product not found.";
     }
-}
-
-function addItemToCart(productId, title, price, imageSrc) {
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-  const existingItem = cartItems.find(item => item.productId === productId);
-  if (existingItem) {
-      alert("This product is already in the cart.");
-      return;
-  }
-
-  cartItems.push({ productId, title, price, imageSrc });
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-  updateCartCount();
-  updateRemoveButtonState();
-  alert("Product added to the cart.");
-}
-
-function removeItemFromCart(productId) {
-  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-  cartItems = cartItems.filter(item => item.productId !== productId);
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-  updateCartCount();
-  updateRemoveButtonState();
-  alert("Product removed from the cart.");
-}
-
-function updateCartCount() {
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-  document.getElementById('cart-count').innerText = cartItems.length;
-
-  const cartLink = document.getElementById('cart-link');
-  const cartIcon = document.getElementById('cart-icon');
-  if (cartItems.length > 0) {
-      cartLink.href = "https://blagojce-7.github.io/dropshipping/shop-cart.html";
-      cartLink.classList.remove('disabled');
-      cartIcon.style.opacity = '1';
-  } else {
-      cartLink.href = "#";
-      cartLink.classList.add('disabled');
-      cartIcon.style.opacity = '0.5';
-  }
-}
-
-function updateRemoveButtonState() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('productId');
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-  const addButton = document.getElementById('add-to-cart-button');
-  const removeButton = document.getElementById('remove-from-cart-button');
-  const itemExists = cartItems.some(item => item.productId === productId);
-
-  if (itemExists) {
-      addButton.style.display = 'none';
-      removeButton.style.display = 'inline-block';
-  } else {
-      addButton.style.display = 'inline-block';
-      removeButton.style.display = 'none';
-  }
-}
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('.product-images img ');
-
-  images.forEach(image => {
+    }
+    
+    function addItemToCart(productId, title, price, imageSrc) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    const existingItem = cartItems.find(item => item.productId === productId);
+    if (existingItem) {
+        alert("This product is already in the cart.");
+        return;
+    }
+    
+    cartItems.push({ productId, title, price, imageSrc });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    updateCartCount();
+    updateRemoveButtonState();
+    alert("Product added to the cart.");
+    }
+    
+    function removeItemFromCart(productId) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems = cartItems.filter(item => item.productId !== productId);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    updateCartCount();
+    updateRemoveButtonState();
+    alert("Product removed from the cart.");
+    }
+    
+    function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    document.getElementById('cart-count').innerText = cartItems.length;
+    
+    const cartLink = document.getElementById('cart-link');
+    const cartIcon = document.getElementById('cart-icon');
+    if (cartItems.length > 0) {
+        cartLink.href = "https://blagojce-7.github.io/dropshipping/shop-cart.html";
+        cartLink.classList.remove('disabled');
+        cartIcon.style.opacity = '1';
+    } else {
+        cartLink.href = "#";
+        cartLink.classList.add('disabled');
+        cartIcon.style.opacity = '0.5';
+    }
+    }
+    
+    function updateRemoveButtonState() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('productId');
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    const addButton = document.getElementById('add-to-cart-button');
+    const removeButton = document.getElementById('remove-from-cart-button');
+    const itemExists = cartItems.some(item => item.productId === productId);
+    
+    if (itemExists) {
+        addButton.style.display = 'none';
+        removeButton.style.display = 'inline-block';
+    } else {
+        addButton.style.display = 'inline-block';
+        removeButton.style.display = 'none';
+    }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.product-images img ');
+    
+    images.forEach(image => {
     image.style.width = '500px';
     image.style.height = '500px';
     image.style.objectFit = 'cover';
     image.style.borderRadius = '10px';
-  });
-});
-////
-
-
-// --------------------------- SCRIPT ЗА REVIEW ------------------------------
-
-
-    // Слушатели за настани за ѕвездите за рецензија
+    });
+    });
+    ////
+    
+    
+    // --------------------------- SCRIPT FOR REVIEW ------------------------------
+    
+    
+    // Event listeners for the review stars
     document.querySelectorAll('.star').forEach(star => {
       star.addEventListener('mouseover', function () {
           highlightStars(this.getAttribute('data-value'));
       });
-
+    
       star.addEventListener('mouseout', function () {
           resetStars();
       });
-
+    
       star.addEventListener('click', function () {
           if (checkLoggedInStatus()) {
               const productId = new URLSearchParams(window.location.search).get('productId');
               const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
               const currentUserId = getCurrentUserId();
-
+    
               if (reviews[productId] && reviews[productId].find(review => review.userId === currentUserId)) {
                   alert('You have already submitted a review for this product. Please delete your existing review to submit a new one.');
               } else {
@@ -699,234 +691,233 @@ document.addEventListener("DOMContentLoaded", function() {
               promptCreateAccount();
           }
       });
-  });
-
-  // Слушател за настан за копчето за поднесување рецензија
-  document.getElementById('submit-review').addEventListener('click', function () {
+    });
+    
+    // Event listener for the review submit button
+    document.getElementById('submit-review').addEventListener('click', function () {
       const selectedStars = document.querySelectorAll('.star.selected');
       const rating = selectedStars.length > 0 ? parseInt(selectedStars[selectedStars.length - 1].getAttribute('data-value')) : 0;
       const reviewText = document.getElementById('review-text').value;
-
-      if (rating && reviewText.length >= 5 && reviewText.length <= 30) { // Валидација за мин и макс должина на текстот
+    
+      if (rating && reviewText.length >= 5 && reviewText.length <= 30) { // Validation for min and max text length
           submitReview(rating, reviewText);
           closeReviewModal();
       } else {
           alert('Please select a star rating and write a review between 5 and 30 characters.');
       }
-  });
-
-  // Додавање на слушател за настан за Enter копчето во текстуалното поле за рецензија
-  document.getElementById('review-text').addEventListener('keypress', function (e) {
+    });
+    
+    // Adding event listener for the Enter key in the review text field
+    document.getElementById('review-text').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
           const selectedStars = document.querySelectorAll('.star.selected');
           const rating = selectedStars.length > 0 ? parseInt(selectedStars[selectedStars.length - 1].getAttribute('data-value')) : 0;
           const reviewText = document.getElementById('review-text').value;
-
-          if (rating && reviewText.length >= 5 && reviewText.length <= 30) { // Валидација за мин и макс должина на текстот
+    
+          if (rating && reviewText.length >= 5 && reviewText.length <= 30) { // Validation for min and max text length
               submitReview(rating, reviewText);
               closeReviewModal();
           } else {
               alert('Please select a star rating and write a review between 5 and 30 characters.');
           }
       }
-  });
-
-  displayReviews(); // Прикажување на рецензиите при вчитување на страницата
-
-  // Get the modal
-  var modal = document.getElementById("reviewModal");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+    });
+    
+    displayReviews(); // Display reviews when the page loads
+    
+    // Get the modal
+    var modal = document.getElementById("reviewModal");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
       closeReviewModal();
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
       if (event.target == modal) {
           closeReviewModal();
       }
-  }; // Затворање на DOMContentLoaded слушателот
-
-
-// Функција за означување на ѕвездите при поместување на маусот
-function highlightStars(rating) {
-  document.querySelectorAll('.star').forEach(star => {
+    }; // Close the DOMContentLoaded listener
+    
+    // Function to highlight stars on mouseover
+    function highlightStars(rating) {
+    document.querySelectorAll('.star').forEach(star => {
       if (parseInt(star.getAttribute('data-value')) <= rating) {
           star.classList.add('hover');
       } else {
           star.classList.remove('hover');
       }
-  });
-}
-
-// Функција за ресетирање на ѕвездите по поместувањето на маусот
-function resetStars() {
-  document.querySelectorAll('.star').forEach(star => {
+    });
+    }
+    
+    // Function to reset stars after mouseover
+    function resetStars() {
+    document.querySelectorAll('.star').forEach(star => {
       star.classList.remove('hover');
-  });
-}
-
-// Функција за селектирање на ѕвездите при клик
-function selectStars(rating) {
-  document.querySelectorAll('.star').forEach(star => {
+    });
+    }
+    
+    // Function to select stars on click
+    function selectStars(rating) {
+    document.querySelectorAll('.star').forEach(star => {
       if (parseInt(star.getAttribute('data-value')) <= rating) {
           star.classList.add('selected');
       } else {
           star.classList.remove('selected');
       }
-  });
-}
-
-// Функција за поднесување на рецензија
-function submitReview(rating, reviewText) {
-  const productId = new URLSearchParams(window.location.search).get('productId');
-  let reviews = JSON.parse(localStorage.getItem('reviews')) || {};
-
-  if (!reviews[productId]) {
-      reviews[productId] = [];
-  }
-
-  const currentUserId = getCurrentUserId();
-  const existingReview = reviews[productId].find(review => review.userId === currentUserId);
-  if (existingReview) {
-      alert('You have already submitted a review for this product.');
-      return;
-  }
-
-  const review = {
-      userId: currentUserId,
-      rating: rating, // Осигурување дека вредноста е број
-      text: reviewText,
-      date: new Date().toLocaleDateString()
-  };
-
-  reviews[productId].push(review);
-  localStorage.setItem('reviews', JSON.stringify(reviews));
-
-  displayReviews();
-  alert('Review submitted!');
-  document.getElementById('submit-review').disabled = true;
-  disableReviewSection();
-}
-
-// Функција за приказ на рецензии
-function displayReviews() {
-  const productId = new URLSearchParams(window.location.search).get('productId');
-  const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
-  const reviewsContainer = document.getElementById('reviews');
-
-  reviewsContainer.innerHTML = '';
-
-  if (reviews[productId]) {
-      reviews[productId].forEach(review => {
-          const reviewElement = document.createElement('div');
-          reviewElement.classList.add('review');
-          reviewElement.innerHTML = `
-              User: ${review.userId}<br>
-              Rating: ${review.rating} stars<br> <!-- Поправено за правилно прикажување на бројот на ѕвезди -->
-              Text: ${review.text}<br>
-              Date: ${review.date}<br>
-              ${review.userId === getCurrentUserId() ? '<button class="remove-review" data-review-id="'+review.userId+'">Remove Review</button>' : ''}
-          `;
-          reviewsContainer.appendChild(reviewElement);
-      });
-
-      // Проверка дали тековниот корисник веќе има оставено рецензија
-      const currentUserReview = reviews[productId].find(review => review.userId === getCurrentUserId());
-      if (currentUserReview) {
-          disableReviewSection();
-      }
-
-      // Додавање на слушатели за настани за бришење на рецензијата
-      document.querySelectorAll('.remove-review').forEach(button => {
-          button.addEventListener('click', function() {
-              removeReview(productId, this.getAttribute('data-review-id'));
-          });
-      });
-  } else {
-      reviewsContainer.innerText = 'No reviews yet.';
-  }
-}
-
-// Функција за прикажување на модалот за рецензија
-function showReviewModal() {
-  var modal = document.getElementById("reviewModal");
-  modal.style.display = "block";
-}
-
-// Функција за затворање на модалот за рецензија
-function closeReviewModal() {
-  var modal = document.getElementById("reviewModal");
-  modal.style.display = "none";
-}
-
-// Функција за деактивирање на делот за рецензии
-function disableReviewSection() {
-  document.querySelectorAll('.star').forEach(star => {
+    });
+    }
+    
+    // Function to submit a review
+    function submitReview(rating, reviewText) {
+    const productId = new URLSearchParams(window.location.search).get('productId');
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || {};
+    
+    if (!reviews[productId]) {
+        reviews[productId] = [];
+    }
+    
+    const currentUserId = getCurrentUserId();
+    const existingReview = reviews[productId].find(review => review.userId === currentUserId);
+    if (existingReview) {
+        alert('You have already submitted a review for this product.');
+        return;
+    }
+    
+    const review = {
+        userId: currentUserId,
+        rating: rating, // Ensure the value is a number
+        text: reviewText,
+        date: new Date().toLocaleDateString()
+    };
+    
+    reviews[productId].push(review);
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    
+    displayReviews();
+    alert('Review submitted!');
+    document.getElementById('submit-review').disabled = true;
+    disableReviewSection();
+    }
+    
+    // Function to display reviews
+    function displayReviews() {
+    const productId = new URLSearchParams(window.location.search).get('productId');
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
+    const reviewsContainer = document.getElementById('reviews');
+    
+    reviewsContainer.innerHTML = '';
+    
+    if (reviews[productId]) {
+        reviews[productId].forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = `
+                User: ${review.userId}<br>
+                Rating: ${review.rating} stars<br> <!-- Fixed to correctly display the number of stars -->
+                Text: ${review.text}<br>
+                Date: ${review.date}<br>
+                ${review.userId === getCurrentUserId() ? '<button class="remove-review" data-review-id="'+review.userId+'">Remove Review</button>' : ''}
+            `;
+            reviewsContainer.appendChild(reviewElement);
+        });
+    
+        // Check if the current user has already left a review
+        const currentUserReview = reviews[productId].find(review => review.userId === getCurrentUserId());
+        if (currentUserReview) {
+            disableReviewSection();
+        }
+    
+        // Adding event listeners for removing reviews
+        document.querySelectorAll('.remove-review').forEach(button => {
+            button.addEventListener('click', function() {
+                removeReview(productId, this.getAttribute('data-review-id'));
+            });
+        });
+    } else {
+        reviewsContainer.innerText = 'No reviews yet.';
+    }
+    }
+    
+    // Function to show the review modal
+    function showReviewModal() {
+    var modal = document.getElementById("reviewModal");
+    modal.style.display = "block";
+    }
+    
+    // Function to close the review modal
+    function closeReviewModal() {
+    var modal = document.getElementById("reviewModal");
+    modal.style.display = "none";
+    }
+    
+    // Function to disable the review section
+    function disableReviewSection() {
+    document.querySelectorAll('.star').forEach(star => {
       star.classList.remove('selected');
-  });
-  document.getElementById('review-text').value = '';
-  document.getElementById('review-text').disabled = true;
-  document.getElementById('submit-review').disabled = true;
-}
-
-// Функција за активирање на делот за рецензии
-function enableReviewSection() {
-  document.getElementById('submit-review').disabled = false;
-  document.getElementById('review-text').disabled = false;
-}
-
-// Функција за бришење на рецензија
-function removeReview(productId, userId) {
-  let reviews = JSON.parse(localStorage.getItem('reviews')) || {};
-
-  if (reviews[productId]) {
-      reviews[productId] = reviews[productId].filter(review => review.userId !== userId);
-      localStorage.setItem('reviews', JSON.stringify(reviews));
-      displayReviews();
-      enableReviewSection(); // Активирање на делот за рецензии по бришењето
-  }
-}
-
-// Функција за добивање на тековниот корисник
-function getCurrentUserId() {
-  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-  if (loggedInUser) {
-      return `${loggedInUser.firstName} ${loggedInUser.lastName}`;
-  }
-  return "Anonymous"; // Ако нема најавен корисник
-}
-
-// Функција за проверка на статусот на најава
-function checkLoggedInStatus() {
-  return JSON.parse(localStorage.getItem('loggedInUser')) !== null;
-}
-
-// Функција за прикажување на порака за креирање на акаунт
-function promptCreateAccount() {
-  alert('Please create an account or log in to submit a review.');
-  // Тука може да додадете пренасочување кон страницата за креирање акаунт
-}
-
-
-
-// --------------------------- END ЗА REVIEW ------------------------------
-
-// ------------------------ SUBSCRIBE FOOTER --------------------- //
-// Вчитување на претплатените емаил адреси од localStorage
-let subscribedEmails = new Set(JSON.parse(localStorage.getItem('subscribedEmails')) || []);
-
-// Функција за претплата
-function subscribe(event) {
-    event.preventDefault(); // Спречува стандардно поднесување на формата
+    });
+    document.getElementById('review-text').value = '';
+    document.getElementById('review-text').disabled = true;
+    document.getElementById('submit-review').disabled = true;
+    }
+    
+    // Function to enable the review section
+    function enableReviewSection() {
+    document.getElementById('submit-review').disabled = false;
+    document.getElementById('review-text').disabled = false;
+    }
+    
+    // Function to remove a review
+    function removeReview(productId, userId) {
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || {};
+    
+    if (reviews[productId]) {
+        reviews[productId] = reviews[productId].filter(review => review.userId !== userId);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        displayReviews();
+        enableReviewSection(); // Enable the review section after removing the review
+    }
+    }
+    
+    // Function to get the current user
+    function getCurrentUserId() {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (loggedInUser) {
+        return `${loggedInUser.firstName} ${loggedInUser.lastName}`;
+    }
+    return "Anonymous"; // If no user is logged in
+    }
+    
+    // Function to check the login status
+    function checkLoggedInStatus() {
+    return JSON.parse(localStorage.getItem('loggedInUser')) !== null;
+    }
+    
+    // Function to prompt for account creation
+    function promptCreateAccount() {
+    alert('Please create an account or log in to submit a review.');
+    // You can add a redirect to the account creation page here
+    }
+    
+    
+    
+    // --------------------------- END FOR REVIEW ------------------------------
+    
+    // ------------------------ SUBSCRIBE FOOTER --------------------- //
+    // Loading subscribed email addresses from localStorage
+    let subscribedEmails = new Set(JSON.parse(localStorage.getItem('subscribedEmails')) || []);
+    
+    // Function to subscribe
+    function subscribe(event) {
+    event.preventDefault(); // Prevent default form submission
     var emailInput = document.getElementById('email');
     var email = emailInput.value.trim();
     var messageDiv = document.getElementById('message');
-
+    
     if (email) {
         if (subscribedEmails.has(email)) {
             messageDiv.innerText = `The email ${email} is already subscribed.`;
@@ -935,38 +926,38 @@ function subscribe(event) {
             localStorage.setItem('subscribedEmails', JSON.stringify(Array.from(subscribedEmails)));
             messageDiv.innerText = `Thank you for subscribing! You'll now receive updates from Urban Vibe Store at ${email}.`;
         }
-        emailInput.value = ''; // Го брише полето за внесување
+        emailInput.value = ''; // Clear the input field
         messageDiv.style.display = 'block';
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-        // Го крие порака по 5 секунди
+    
+        // Hide the message after 5 seconds
         setTimeout(() => {
             messageDiv.style.display = 'none';
         }, 5000);
     } else {
         alert('Please enter a valid email address.');
     }
-}
-
-// Проверка дали корисникот веќе е претплатен на двете страници
-function checkSubscriptionStatus() {
+    }
+    
+    // Check if the user is already subscribed on both pages
+    function checkSubscriptionStatus() {
     var emailInput = document.getElementById('email');
     var email = emailInput.value.trim();
     var messageDiv = document.getElementById('message');
-
+    
     if (email && subscribedEmails.has(email)) {
         messageDiv.innerText = `The email ${email} is already subscribed.`;
         messageDiv.style.display = 'block';
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-        // Го крие порака по 5 секунди
+    
+        // Hide the message after 5 seconds
         setTimeout(() => {
             messageDiv.style.display = 'none';
         }, 5000);
-
+    
         return true;
     }
     return false;
-}
-
+    }
+    
 // -------------------------------------------------------------- //
