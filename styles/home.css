@@ -1,30 +1,30 @@
-/* Styles for the navigation menu */
+/* Стилови за навигационото мени */
 .navbar {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-/* Styles for the category section */
+/* Стилови за категоријата */
 #category {
   padding: 5% 6%;
 }
 
-/* Styles for the product cards section */
+/* Стилови за картичките со производи */
 #product-cards {
   padding: 5% 10%;
 }
 
-/* Styles for the footer */
+/* Стилови за подножјето (footer) */
 #footer {
   margin-bottom: 2%;
   margin-top: 2%;
 }
 
-/* Centering the filter buttons */
+/* Центрирање на копчињата за филтрирање */
 .filter-btns {
   text-align: center;
 }
 
-/* Styles for the filter buttons */
+/* Стилови за копчињата за филтрирање */
 .filter-btn {
   background: none;
   cursor: pointer;
@@ -41,7 +41,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-/* Styles for the underline beneath filter buttons */
+/* Стилови за линијата под копчињата */
 .filter-btn::after {
   content: "";
   position: absolute;
@@ -54,17 +54,16 @@
   transition: all 0.2s ease-in-out;
 }
 
-/* Color change on hover */
+/* Промени на бојата при ховер */
 .filter-btn:hover {
   color: #555;
 }
 
-/* Show underline on hover */
+/* Прикажи линија под копчињата при ховер */
 .filter-btn:hover::after {
   width: 100%;
 }
-
-/* Styles for the up button */
+/* Копче за нагоре */
 .up-icon {
   position: fixed;
   bottom: 20px; 
@@ -72,29 +71,28 @@
   z-index: 1000; 
   color: #f10303; 
 }
-
-/* Styles for active buttons */
+/* Стилови за активните копчиња */
 .active-btn {
   color: #555;
 }
 
-/* Show underline for active buttons */
+/* Прикажи линија под активните копчиња */
 .active-btn::after {
   width: 100%;
 }
 
-/* Centering titles */
+/* Центрирање на насловите */
 .canvas-title {
   text-align: center;
 }
 
-/* Styles for disabled elements */
+/* Стилови за онеспособени елементи */
 .disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-/* Basic styles for the settings menu */
+/* Основни стилови за менито за подесувања */
 .settings-menu {
   position: absolute;
   top: 50px;
@@ -106,24 +104,24 @@
   z-index: 1000;
 }
 
-/* Styles for the list in the settings menu */
+/* Стилови за листата во менито за подесувања */
 .settings-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Styles for the items in the list */
+/* Стилови за ставките во листата */
 .settings-menu li {
   border-bottom: 1px solid #eee;
 }
 
-/* Remove the underline for the last item */
+/* Отстранување на линијата за последната ставка */
 .settings-menu li:last-child {
   border-bottom: none;
 }
 
-/* Styles for the links in the settings menu */
+/* Стилови за линковите во менито за подесувања */
 .settings-menu a {
   display: block;
   padding: 10px;
@@ -131,12 +129,12 @@
   text-decoration: none;
 }
 
-/* Color change on hover for the links */
+/* Промена на бојата при ховер на линковите */
 .settings-menu a:hover {
   background-color: #f6f6f6;
 }
 
-/* Styles for the profile section */
+/* Стилови за профил секцијата */
 #profileSection {
   margin-top: 20px;
   padding: 20px;
@@ -148,17 +146,17 @@
   margin-right: auto;
 }
 
-/* Styles for the title in the profile section */
+/* Стилови за насловот во профил секцијата */
 #profileSection h2 {
   margin-bottom: 20px;
 }
 
-/* Styles for paragraphs in the profile section */
+/* Стилови за параграфите во профил секцијата */
 #profileSection p {
   margin: 10px 0;
 }
 
-/* Centering the profile and change password sections */
+/* Центрирање на деловите за профил и промена на лозинка */
 #profileSection, #changePasswordSection {
   width: 50%;
   padding: 20px;
@@ -167,33 +165,33 @@
   border-radius: 10px;
 }
 
-/* Styles for the modal window */
+/* Стилови за модалниот прозорец */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stays fixed on the screen */
-  z-index: 1000; /* Appears above all other elements */
+  display: none; /* Скриен по основа */
+  position: fixed; /* Останува фиксиран на екранот */
+  z-index: 1000; /* Излезен над сите други елементи */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevents scrolling */
-  background-color: rgba(0,0,0,0.4); /* Gray background */
+  overflow: hidden; /* Спречува скролање */
+  background-color: rgba(0,0,0,0.4); /* Фон со боја на сиво */
 }
 
-/* Styles for the content of the modal window */
+/* Стилови за содржината на модалниот прозорец */
 .modal-content {
   background-color: #fff;
-  margin: 10% auto; /* Center the modal window */
+  margin: 10% auto; /* Центрира модалниот прозорец */
   padding: 20px;
   border: 1px solid #ccc;
-  width: 80%; /* Smaller width for better appearance */
-  max-width: 400px; /* Maximum width */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for better appearance */
-  text-align: center; /* Centered text */
+  width: 80%; /* Помала ширина за подобар изглед */
+  max-width: 400px; /* Максимална ширина */
+  border-radius: 10px; /* Заоблени агли */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Сенка за подобар изглед */
+  text-align: center; /* Центриран текст */
 }
 
-/* Styles for the close button of the modal window */
+/* Стилови за копчето за затворање на модалниот прозорец */
 .close {
   color: #aaa;
   float: right;
@@ -203,7 +201,7 @@
   margin-right: -10px;
 }
 
-/* Color change on hover for the close button */
+/* Промени на бојата при ховер на копчето за затворање */
 .close:hover,
 .close:focus {
   color: black;
@@ -211,37 +209,37 @@
   cursor: pointer;
 }
 
-/* Styles for the title in the modal window */
+/* Стилови за насловот во модалниот прозорец */
 .modal-content h2 {
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-/* Styles for paragraphs in the modal window */
+/* Стилови за параграфите во модалниот прозорец */
 .modal-content p {
   margin: 10px 0;
   padding: 10px;
-  background-color: #f9f9f9; /* Background color */
-  border: 1px solid #ddd; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better appearance */
+  background-color: #f9f9f9; /* Боја за позадината */
+  border: 1px solid #ddd; /* Боја за границата */
+  border-radius: 5px; /* Заоблени агли */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Сенка за подобар изглед */
   display: flex;
-  justify-content: space-between; /* Evenly distribute content */
+  justify-content: space-between; /* Рамномерно распоредување на содржината */
   align-items: center;
 }
 
-/* Styles for labels in the modal window */
+/* Стилови за етикетите во модалниот прозорец */
 .modal-content p strong {
-  color: #333; /* Text color for labels */
+  color: #333; /* Боја за текстот на етикетата */
   font-weight: bold;
 }
 
-/* Styles for text fields in the modal window */
+/* Стилови за текстуалните полиња во модалниот прозорец */
 .modal-content p span {
-  color: #555; /* Text color for values */
+  color: #555; /* Боја за текстот на вредностите */
 }
 
-/* Styles for labels in the modal window */
+/* Стилови за етикетите во модалниот прозорец */
 .modal-content label {
   display: block;
   text-align: left;
@@ -249,16 +247,16 @@
   font-weight: bold;
 }
 
-/* Styles for text fields in the modal window */
+/* Стилови за текстуалните полиња во модалниот прозорец */
 .modal-content input {
-  width: 100%; /* 100% width for better appearance */
+  width: 100%; /* Ширина на 100% за подобро изглед */
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Styles for buttons in the modal window */
+/* Стилови за копчињата во модалниот прозорец CHANGE PASSWORD*/
 .modal-content button {
   padding: 10px 20px;
   border: none;
@@ -270,61 +268,63 @@
   transition: background-color 0.3s;
 }
 
-/* Color change on hover for buttons */
+/* Промени на бојата при ховер на копчињата */
 .modal-content button:hover {
   background-color: #0056b3;
 }
 
-/* Styles for buttons of type "button" */
+/* Стилови за копчињата со тип "button" */
 .modal-content button[type="button"] {
   background-color: #ccc;
   margin-left: 10px;
 }
 
-/* Color change on hover for buttons of type "button" */
+/* Промени на бојата при ховер на копчињата со тип "button" */
 .modal-content button[type="button"]:hover {
   background-color: #bbb;
 }
 
-/* Prevent body scrolling when the modal window is open */
+/* Спречување на скролање на телото кога модалниот прозорец е отворен */
 body.modal-open {
   overflow: hidden;
 }
 
-/* Styles for the checkbox to show the password */
+/* Стилови за квадратчето за прикажување на лозинката */
 .modal-content .password-toggle {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Left alignment */
+  justify-content: flex-start; /* Лево порамнување */
   margin-top: -10px;
   margin-bottom: 20px;
 }
 
-/* Styles for the checkbox in the password */
+/* Стилови за квадратчето во лозинката */
 .modal-content .password-toggle input[type="checkbox"] {
   margin-right: 5px;
-  transform: scale(1.2); /* Enlarge the checkbox */
+  transform: scale(1.2); /* Зголемување на квадратчето */
 }
 
 .modal-content .password-toggle label {
   margin: 0;
-  font-size: 14px; /* Adjust the font size */
+  font-size: 14px; /* Подесување на големината на фонтот */
 }
 
-/* Responsive styles for screens with a maximum width of 768px */
+
+
+
 @media (max-width: 768px) {
-  /* Navigation menu */
+  /* Навигационо мени */
   .navbar {
     text-align: center;
     padding: 10px;
   }
 
-  /* Category section */
+  /* Категорија */
   #category {
     padding: 10% 5%;
   }
 
-  /* Product cards section */
+  /* Картички со производи */
   #product-cards {
     display: flex;
     flex-direction: column;
@@ -335,18 +335,13 @@ body.modal-open {
     margin-bottom: 10px;
   }
 
-  .col.filter-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  /* Footer */
+  /* Подножје (footer) */
   #footer {
     margin-bottom: 5%;
     margin-top: 5%;
   }
 
-  /* Filter buttons */
+  /* Копчиња за филтрирање */
   .filter-btns {
     text-align: center;
   }
@@ -361,20 +356,20 @@ body.modal-open {
     height: 1px;
   }
 
-  /* Up button */
+  /* Копче за нагоре */
   .up-icon {
     bottom: 10px;
     right: 10px;
     font-size: 24px;
   }
 
-  /* Profile section */
+  /* Профил секција */
   #profileSection, #changePasswordSection {
     width: 90%;
     padding: 10px;
   }
 
-  /* Modal window */
+  /* Модален прозорец */
   .modal-content {
     margin: 20% auto;
     width: 90%;
@@ -417,7 +412,7 @@ body.modal-open {
     font-size: 12px;
   }
 
-  /* Settings menu */
+  /* Менито за подесувања */
   .settings-menu {
     top: 30px;
     left: 10px; /* moved slightly to the left */
@@ -429,13 +424,13 @@ body.modal-open {
     font-size: 16px; /* increased size */
   }
 
-  /* Centering titles */
+  /* Центрирање на насловите */
   .canvas-title {
     text-align: center;
     font-size: 24px;
   }
 
-  /* Reduce the size of the search bar */
+  /* Намалување на големината на пребарувачот */
   .search-bar {
     width: 50%; /* reduced to 50% */
     margin: 0 auto; /* center align */

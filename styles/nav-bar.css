@@ -1,79 +1,58 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-/* Global styles for all elements, removing default margin and padding,
-setting box-sizing to border-box, and enabling smooth scrolling */
 
 /* <!----------------------------NAV BAR-----------------------------> */
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
-  padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-/* Styles for the navigation bar, making it a flex container that centers its items,
-justifies content space between, sets background color, and adds padding */
-
-.navbar-logo {
-  margin-left: 100px;
+.navbar-logo{
+    margin-left: 100px;
 }
-
-/* Styles for the navbar logo, adding left margin */
 
 .navbar-search {
-  display: flex;
+    display: flex;
 }
-
-/* Styles for the search bar container in the navbar, making it a flex container */
 
 .navbar-search input {
-  padding: 5px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
 }
-
-/* Styles for the search input field, adding padding, setting font size, removing border,
-rounding left corners, and removing outline */
 
 .navbar-search button {
-  padding: 5px 10px;
-  font-size: 1rem;
-  border: none;
-  background-color: #575757;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #575757;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-
-/* Styles for the search button, adding padding, setting font size, removing border,
-setting background and text colors, rounding right corners, adding cursor pointer,
-and enabling background color transition on hover */
 
 .navbar-search button:hover {
-  background-color: #444;
+    background-color: #444;
 }
 
-/* Hover effect for the search button, changing the background color */
 
-/* NAV BAR - BUTTON - LOG IN / REGISTER */
-#button-login {
-  display: flex;
-  gap: 25px;
-  margin-right: 30px;
+/* NAV BAR - BUTTON - LOG IN / REGISTAR */
+#button-login{
+    display: flex;
+    gap: 25px;
+    margin-right: 30px;
 }
-
-/* Styles for the login/register button container in the navbar, making it a flex container,
-adding space between buttons, and adding right margin */
 
 .button-85 {
   padding: 0.6em 2em;
@@ -88,25 +67,22 @@ adding space between buttons, and adding right margin */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
-
-/* Styles for button with class "button-85", adding padding, removing border and outline,
-setting text color and background color, adding cursor pointer, setting relative position,
-z-index, border radius, and disabling text selection and touch manipulation */
 
 .button-85:before {
   content: "";
   background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
   );
   position: absolute;
   top: -2px;
@@ -122,22 +98,17 @@ z-index, border radius, and disabling text selection and touch manipulation */
   border-radius: 10px;
 }
 
-/* Styles for the glowing effect before the "button-85", creating a gradient background
-animation with blur effect and smooth opacity transition */
-
 @keyframes glowing-button-85 {
   0% {
-      background-position: 0 0;
+    background-position: 0 0;
   }
   50% {
-      background-position: 400% 0;
+    background-position: 400% 0;
   }
   100% {
-      background-position: 0 0;
+    background-position: 0 0;
   }
 }
-
-/* Keyframes for the glowing animation, changing the background position */
 
 .button-85:after {
   z-index: -1;
@@ -151,7 +122,7 @@ animation with blur effect and smooth opacity transition */
   border-radius: 10px;
 }
 
-/* Styles for the dark background effect after the "button-85" */
+/*     Shopping Cart     */
 
 #cart-count {
   background-color: red;
@@ -166,66 +137,53 @@ animation with blur effect and smooth opacity transition */
   font-size: 14px;
   line-height: 14px;
 }
+.btn-purchase{
+    text-align: center;
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+  }
+ 
+  #shopping-cart{
+    padding: 5% 5%;
+  }
+ 
+  .cart-total{
+    text-align: right;
+    font-size: 1.3rem;
+  }
+ 
+ .up-icon{
+    color: black;
+    position: fixed;
+    float: right;
+    z-index: 1;
+    left: 95%;
+    top: 85%;
+    font-size: 2rem;
+  }
+ 
 
-/* Styles for the cart count badge, setting background color, text color, border radius,
-padding, margin, position, transformation, font size, and line height */
 
-.btn-purchase {
-  text-align: center;
-  margin: auto;
-  padding: 2%;
-  width: 50%;
-}
 
-/* Styles for the purchase button, centering the text, adding margin and padding, and setting width */
+  
+  #not-found{
+   text-align: center;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 48px;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   color: #000000;
+   font-weight: 700;
+   text-decoration: none solid rgb(68, 68, 68);
+   font-style: normal;
+   font-variant: small-caps;
+   text-transform: none;
+  }
 
-#shopping-cart {
-  padding: 5% 5%;
-}
-
-/* Styles for the shopping cart container, adding padding */
-
-.cart-total {
-  text-align: right;
-  font-size: 1.3rem;
-}
-
-/* Styles for the cart total text, aligning it to the right and setting font size */
-
-.up-icon {
-  color: black;
-  position: fixed;
-  float: right;
-  z-index: 1;
-  left: 95%;
-  top: 85%;
-  font-size: 2rem;
-}
-
-/* Styles for the "back to top" icon, setting color, fixed position, z-index, float,
-and setting position and font size */
-
-/* Not found text */
-#not-found {
-  text-align: center;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 48px;
-  letter-spacing: 2px;
-  word-spacing: 2px;
-  color: #000000;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: small-caps;
-  text-transform: none;
-}
-
-/* Styles for the "not found" message, centering the text, setting font family, size,
-letter spacing, word spacing, color, weight, text decoration, style, variant, and transform */
-
-/* LOG IN / NAME */
-#user-name {
-  background: blue;
+  /* LOG IN / NAME */
+#user-name{
+    background: blue;
   border: 1px solid white;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
@@ -233,7 +191,7 @@ letter spacing, word spacing, color, weight, text decoration, style, variant, an
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
@@ -249,10 +207,6 @@ letter spacing, word spacing, color, weight, text decoration, style, variant, an
   vertical-align: middle;
 }
 
-/* Styles for the user name button, setting background, border, border radius, box shadow,
-box sizing, text color, cursor pointer, display, font family, size, weight, line height,
-min height, outline, padding, text alignment, text rendering, text transform, and disabling text selection */
-
 #logoutBtn {
   background: #FF4742;
   border: 1px solid #fdfdfd;
@@ -262,7 +216,7 @@ min height, outline, padding, text alignment, text rendering, text transform, an
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
@@ -279,11 +233,6 @@ min height, outline, padding, text alignment, text rendering, text transform, an
   vertical-align: middle;
 }
 
-/* Styles for the logout button, setting background, border, border radius, box shadow,
-box sizing, text color, cursor pointer, display, font family, size, weight, line height,
-min height, outline, height, padding, text alignment, text rendering, text transform,
-and disabling text selection */
-
 #logoutBtn:hover,
 #logoutBtn:active {
   background-color: initial;
@@ -291,170 +240,121 @@ and disabling text selection */
   color: #FF4742;
 }
 
-/* Hover and active state styles for the logout button, resetting background color and position,
-and changing text color */
-
 #logoutBtn:active {
   opacity: .5;
 }
 
-/* Active state style for the logout button, setting opacity */
 
-/* MOBILE RESPONSIVE STYLES */
+/* MOBILE RESP */
 
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
-
-  /* Mobile responsive styles for the navbar, making it a column flex container,
-  aligning items flex-start, and adding padding */
 
   .navbar-logo {
-      margin-left: 0;
-      margin-bottom: 10px;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
-
-  /* Mobile responsive styles for the navbar logo, resetting left margin and adding bottom margin */
 
   .navbar-search {
-      width: 100%;
-      margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
-
-  /* Mobile responsive styles for the search bar container, setting width to 100%
-  and adding bottom margin */
 
   .navbar-search input {
-      width: calc(100% - 55px);
-      margin-right: -5px;
-      border-radius: 5px 0 0 5px;
+    width: calc(100% - 55px); /* Намалено за 50% */
+    margin-right: -5px;
+    border-radius: 5px 0 0 5px;
   }
-
-  /* Mobile responsive styles for the search input field, setting width, right margin,
-  and rounding left corners */
 
   .navbar-search button {
-      width: 55px;
-      border-radius: 0 5px 5px 0;
+    width: 55px;
+    border-radius: 0 5px 5px 0;
   }
-
-  /* Mobile responsive styles for the search button, setting width and rounding right corners */
 
   #button-login {
-      width: 100%;
-      justify-content: space-between;
-      margin-right: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
   }
-
-  /* Mobile responsive styles for the login/register button container, setting width to 100%,
-  justifying content space-between, and resetting right margin */
 
   .button-85 {
-      width: 100%;
-      text-align: center;
-      padding: 12px;
-      font-size: 16px;
+    width: 100%; /* Подолго и пошироко */
+    text-align: center;
+    padding: 12px; /* Повеќе padding */
+    font-size: 16px;
   }
-
-  /* Mobile responsive styles for the button with class "button-85", setting width to 100%,
-  centering text, adding padding, and setting font size */
 
   .cart-link {
-      margin-top: 10px;
-      align-self: flex-end;
+    margin-top: 10px;
+    align-self: flex-end;
   }
-
-  /* Mobile responsive styles for the cart link, adding top margin and aligning self to flex-end */
 
   .cart-icon {
-      height: 30px;
-      margin-right: 5px;
+    height: 30px;
+    margin-right: 5px;
   }
-
-  /* Mobile responsive styles for the cart icon, setting height and right margin */
 
   .badge {
-      font-size: 12px;
-      padding: 3px 7px;
+    font-size: 12px;
+    padding: 3px 7px;
   }
-
-  /* Mobile responsive styles for the badge, setting font size and padding */
 
   .container {
-      width: 100%;
-      padding: 10px;
+    width: 100%;
+    padding: 10px;
   }
-
-  /* Mobile responsive styles for the container, setting width to 100% and adding padding */
 
   .btn-purchase {
-      width: 90%;
-      padding: 10px;
+    width: 90%;
+    padding: 10px;
   }
-
-  /* Mobile responsive styles for the purchase button, setting width and padding */
 
   #shopping-cart {
-      padding: 5% 2%;
+    padding: 5% 2%;
   }
-
-  /* Mobile responsive styles for the shopping cart container, adjusting padding */
 
   .cart-total {
-      text-align: center;
-      font-size: 1rem;
+    text-align: center;
+    font-size: 1rem;
   }
-
-  /* Mobile responsive styles for the cart total text, centering it and setting font size */
 
   .up-icon {
-      font-size: 1.5rem;
-      top: 90%;
-      left: 85%;
+    font-size: 1.5rem;
+    top: 90%;
+    left: 85%;
   }
-
-  /* Mobile responsive styles for the "back to top" icon, adjusting font size and position */
 
   #not-found {
-      font-size: 32px;
+    font-size: 32px;
   }
-
-  /* Mobile responsive styles for the "not found" message, adjusting font size */
 
   #user-name {
-      font-size: 14px;
-      padding: 10px;
+    font-size: 14px;
+    padding: 10px;
   }
-
-  /* Mobile responsive styles for the user name button, adjusting font size and padding */
 
   #logoutBtn {
-      font-size: 14px;
-      padding: 10px;
-      height: auto;
+    font-size: 14px;
+    padding: 10px;
+    height: auto;
   }
 
-  /* Mobile responsive styles for the logout button, adjusting font size, padding, and height */
-
+  /* Копче за подесувања */
   .settings-menu {
-      top: 30px;
-      left: 5%;
-      width: 90%;
-      padding: 12px;
-      font-size: 16px;
-      text-align: center;
+    top: 30px;
+    left: 5%; /* Преместено малку налево */
+    width: 90%;
+    padding: 12px; /* Повеќе padding */
+    font-size: 16px; /* Зголемена големина */
+    text-align: center;
   }
-
-  /* Mobile responsive styles for the settings menu, adjusting position, width,
-  padding, font size, and text alignment */
 
   .settings-menu a {
-      padding: 10px;
-      display: block;
+    padding: 10px;
+    display: block;
   }
-
-  /* Mobile responsive styles for the settings menu links, adjusting padding and display */
 }

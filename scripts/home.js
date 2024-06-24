@@ -1,22 +1,22 @@
 // -------------------- Image Filter Section -------------------- //
 
-// Selecting all filter items and buttons
+// Селектирање на сите филтер елементи и копчиња
 const allFilterItems = document.querySelectorAll('.filter-item');
 const allFilterBtns = document.querySelectorAll('.filter-btn');
 
-// When the page loads, add the 'active-btn' class to the second button
+// При вчитување на страната, додаваме класа 'active-btn' на второто копче
 window.addEventListener('DOMContentLoaded', () => {
     allFilterBtns[1].classList.add('active-btn');
 });
 
-// For each filter button, add an event listener for click events
+// За секое копче за филтер, додаваме слушател на настани за клик
 allFilterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         showFilteredContent(btn);
     });
 });
 
-// Function to show filtered content
+// Функција за прикажување на филтрирана содржина
 function showFilteredContent(btn){
     allFilterItems.forEach((item) => {
         if(item.classList.contains(btn.id)){
@@ -29,7 +29,7 @@ function showFilteredContent(btn){
     });
 }
 
-// Function to reset the active button
+// Функција за ресетирање на активното копче
 function resetActiveBtn(){
     allFilterBtns.forEach((btn) => {
         btn.classList.remove('active-btn');
@@ -39,14 +39,14 @@ function resetActiveBtn(){
 
 // --------------------- Shopping Cart Section ------------------ //
 
-// Check if the document is still loading
+// Проверка дали документот е во состојба на вчитување
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
 } else {
     ready();
 }
 
-// Function that executes when the document is ready
+// Функција која се извршува кога документот е подготвен
 function ready() {
     var addToCartButtons = document.getElementsByClassName('shop-item-button');
     for (var i = 0; i < addToCartButtons.length; i++) {
@@ -54,11 +54,11 @@ function ready() {
         button.addEventListener('click', addToCartClicked);
     }
 
-    window.addEventListener('storage', updateCartCount); // Listen for changes in localStorage
-    updateCartCount(); // Update cart count when the page loads
+    window.addEventListener('storage', updateCartCount); // Слушање на промени во localStorage
+    updateCartCount(); // Ажурирање на бројот на кошничката при вчитување на страната
 }
 
-// Function that executes when the add to cart button is clicked
+// Функција која се извршува при кликање на копчето за додавање во кошничка
 function addToCartClicked(event) {
     var button = event.target;
     var shopItem = button.parentElement.parentElement;
@@ -79,19 +79,19 @@ function addToCartClicked(event) {
         cartItems.push(newItem);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         alert('Item added to cart!');
-        updateCartCount(); // Update cart count when a new item is added
+        updateCartCount(); // Ажурирање на бројот на кошничката кога ќе се додаде нов предмет
     } else {
         alert('This item is already in the cart!');
     }
 }
 
-// Function to update the cart count
+// Функција за ажурирање на бројот на кошничката
 function updateCartCount() {
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     var cartCountElement = document.getElementById('cart-count');
     cartCountElement.innerText = cartItems.length;
 
-    var cartLink = document.querySelector('.navbar a[href="/shop-cart.html"]');
+    var cartLink = document.querySelector('.navbar a[href="https://blagojce-7.github.io/dropshipping/shop-cart.html"]');
     if (cartItems.length > 0) {
         cartLink.classList.remove('disabled');
     } else {
@@ -99,13 +99,16 @@ function updateCartCount() {
     }
 }
 
-// Initialize cart count when the page loads
+// Инициализирање на бројот на кошничката при вчитување на страната
 updateCartCount();
+
+
+
 // -------------------------------------------------------------- //
 
 // -------------------- FOR UP BUTTON -------------------------- //
 
-// Event listener for the scroll to top button
+// Слушател на настани за копчето за враќање на врвот
 document.querySelector('.up-icon').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -113,7 +116,7 @@ document.querySelector('.up-icon').addEventListener('click', function() {
 
 // --------------------- FOR SEARCH ---------------------------- //
 
-// Function to filter products based on the search input
+// Функција за филтрирање на продуктите базирано на внесениот текст за пребарување
 function filterProductCards() {
     var input, filter, cards, card, title, i;
     input = document.getElementById("searchInput");
@@ -135,7 +138,7 @@ function filterProductCards() {
 
 // --------------------- NOT FOUND ITEM ------------------------ //
 
-// Adding an event listener for the search input field
+// Додавање на слушател на настани за полето за пребарување
 document.getElementById("searchInput").addEventListener("keyup", filterProductCards);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -169,29 +172,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // --------------------- FOR LOGIN ----------------------------- //
 document.addEventListener('DOMContentLoaded', function () {
-    // If the user is logged in, start tracking time
+    // Ако е најавен корисник, почни да го следиш времето
     if (isUserLoggedIn()) {
         startTrackingTime();
         saveLastLogin();
     }
 
-    // Populate profile data
+    // Пополни ги податоците на профилот
     populateProfileData();
 });
 
-// Check if the user is logged in (example implementation)
+// Проверка дали корисникот е најавен (пример имплементација)
 function isUserLoggedIn() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     return !!loggedInUser;
 }
 
-// Function to populate profile data
+// Функција за пополнување на профил податоците
 function populateProfileData() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || {};
-    var profileFirstName = loggedInUser.firstName || "John"; // Example, fetch from your system
-    var profileLastName = loggedInUser.lastName || "Doe";   // Example, fetch from your system
-    var profileEmail = loggedInUser.email || "john.doe@example.com"; // Example, fetch from your system
-    var profileGender = loggedInUser.gender || "Male";    // Example, fetch from your system
+    var profileFirstName = loggedInUser.firstName || "John"; // Пример, преземете од вашиот систем
+    var profileLastName = loggedInUser.lastName || "Doe";   // Пример, преземете од вашиот систем
+    var profileEmail = loggedInUser.email || "john.doe@example.com"; // Пример, преземете од вашиот систем
+    var profileGender = loggedInUser.gender || "Male";    // Пример, преземете од вашиот систем
     var spendTime = localStorage.getItem('spendTime') || 0;
     var lastLogin = localStorage.getItem('lastLogin') || 'Never';
 
@@ -202,10 +205,10 @@ function populateProfileData() {
     document.getElementById('profileSpendTime').innerText = formatSpendTime(spendTime);
     document.getElementById('profileLastLogin').innerText = lastLogin;
 
-    updateSpendTimeDisplay(); // Start updating the time spent on the page
+    updateSpendTimeDisplay(); // Започни со ажурирање на времето поминато на страницата
 }
 
-// Format the time spent in a readable format
+// Форматирање на времето поминато во читаема форма
 function formatSpendTime(seconds) {
     var hours = Math.floor(seconds / 3600);
     var minutes = Math.floor((seconds % 3600) / 60);
@@ -214,7 +217,7 @@ function formatSpendTime(seconds) {
     return `${hours}h ${minutes}m ${seconds}s`;
 }
 
-// Start tracking time
+// Започни со следење на времето
 function startTrackingTime() {
     var startTime = Date.now();
     setInterval(function () {
@@ -225,17 +228,17 @@ function startTrackingTime() {
         localStorage.setItem('spendTime', spendTime + timeSpent);
         startTime = currentTime;
 
-        updateSpendTimeDisplay(); // Update the time display
+        updateSpendTimeDisplay(); // Ажурирај го прикажувањето на времето
     }, 1000);
 }
 
-// Function to update the time spent display
+// Функција за ажурирање на прикажувањето на времето поминато
 function updateSpendTimeDisplay() {
     var spendTime = localStorage.getItem('spendTime') || 0;
     document.getElementById('profileSpendTime').innerText = formatSpendTime(spendTime);
 }
 
-// Save the last login time upon login
+// Зачувај го времето на последна најава при најава
 function saveLastLogin() {
     var now = new Date();
     var formattedDate = now.getDate().toString().padStart(2, '0') + '.' + 
@@ -248,77 +251,78 @@ function saveLastLogin() {
     localStorage.setItem('lastLogin', formattedDate);
 }
 
-// Example login function that calls saveLastLogin
+// Пример функција за најава која ја повикува saveLastLogin
 function loginUser() {
     saveLastLogin();
-    // Place your login logic here
+    // Овде ставете ја вашата логика за најава
     startTrackingTime();
 }
 
-// Example logout function that saves the time spent
+// Пример функција за одјава која го зачувува времето поминато
 function logoutUser() {
     var spendTime = parseInt(localStorage.getItem('spendTime')) || 0;
     localStorage.setItem('spendTime', spendTime);
 }
 
-// Check if the user is logged in
+// Проверка дали корисникот е најавен
 function isUserLoggedIn() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     return !!loggedInUser;
 }
 
-// Example function to track time and continue tracking
+// Пример функција за следење на времето и продолжување со времето
 function continueTrackingTime() {
     startTrackingTime();
 }
 
+
 //--------------------
 
-// Function to show user profile
+// Функција за прикажување на профилот на корисникот
 function showUserProfile() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     document.getElementById("user-name").textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
     document.getElementById("user-profile").style.display = "block";
 }
 
-// Function to hide the login button and show the logout button
+// Функција за криење на копчето за најава и прикажување на копчето за одјава
 function hideLoginButton() {
     document.getElementById("loginRegisterBtn").style.display = "none";
     document.getElementById("logoutBtn").style.display = "block";
     document.getElementById("settingsBtn").style.display = "block";
 }
 
-// Function to log out the user
+// Функција за одјава на корисникот
 document.getElementById('logoutLink').addEventListener('click', function() {
-    localStorage.removeItem('loggedInUser'); // Remove logged in user from localStorage
-    localStorage.removeItem('cartItems'); // Clear cart items
-    window.location.href = "/index.html"; // Redirect to login page
+    localStorage.removeItem('loggedInUser'); // Бришење на најавениот корисник од localStorage
+    localStorage.removeItem('cartItems'); // Чистење на кошницата со продукти
+    window.location.href = "https://blagojce-7.github.io/dropshipping/index.html"; // Пренасочување кон страницата за најава
 });
 
-// When the user is logged in, display their name on the right side
+// Кога корисникот е најавен, прикажување на неговото име на десната страна
 document.addEventListener("DOMContentLoaded", function() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
     if (loggedInUser) {
-        // User is logged in
+        // Корисникот е најавен
         document.getElementById('user-name').textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
         document.getElementById('user-profile').style.display = 'block';
         document.getElementById('loginRegisterBtn').style.display = 'none';
         document.getElementById('settingsBtn').style.display = 'block';
     } else {
-        // User is not logged in
+        // Корисникот не е најавен
         document.getElementById('user-profile').style.display = 'none';
         document.getElementById('loginRegisterBtn').style.display = 'block';
         document.getElementById('settingsBtn').style.display = 'none';
     }
 
-    // Show and hide the settings menu
+    // Прикажување и криење на менито за подесувања
     document.getElementById('settings-button').addEventListener('click', function() {
         const settingsMenu = document.getElementById('settingsMenu');
         settingsMenu.style.display = settingsMenu.style.display === 'none' ? 'block' : 'none';
     });
 
-    // Show profile
+    // Прикажување на профилот
     document.getElementById('profileLink').addEventListener('click', function() {
         document.getElementById('profileFirstName').textContent = loggedInUser.firstName;
         document.getElementById('profileLastName').textContent = loggedInUser.lastName;
@@ -331,22 +335,22 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('settingsMenu').style.display = 'none';
     });
 
-    // Show change password modal
+    // Прикажување на модалниот прозорец за промена на лозинка
     document.getElementById('changePasswordLink').addEventListener('click', function() {
         const changePasswordModal = document.getElementById('changePasswordModal');
         changePasswordModal.style.display = 'block';
-        document.body.classList.add('modal-open'); // Prevent scrolling
+        document.body.classList.add('modal-open'); // Спречување на скролање на телото
         document.getElementById('settingsMenu').style.display = 'none';
     });
 
-    // Close change password modal
+    // Затворање на модалниот прозорец за промена на лозинка
     document.getElementById('closeChangePasswordModal').addEventListener('click', function() {
         closeModal('changePasswordModal');
     });
 
-    // Submit change password form
+    // Поднесување на формата за промена на лозинка
     document.getElementById('changePasswordForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); // Спречување на стандардното поднесување на формата
 
         const currentPassword = document.getElementById('currentPasswordChange').value;
         const newPassword = document.getElementById('newPasswordChange').value;
@@ -363,16 +367,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Show deactivate account modal
+    // Прикажување на модалниот прозорец за деактивирање на акаунт
     document.getElementById('deactivateAccountLink').addEventListener('click', function() {
         const deactivateModal = document.getElementById('deactivateModal');
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-        document.getElementById('deactivationEmail').value = loggedInUser.email; // Auto-fill email
+        document.getElementById('deactivationEmail').value = loggedInUser.email; // Автоматски пополнување на email
         deactivateModal.style.display = 'block';
-        document.body.classList.add('modal-open'); // Prevent scrolling
+        document.body.classList.add('modal-open'); // Спречување на скролање на телото
     });
 
-    // Close deactivate account modal
+    // Затворање на модалниот прозорец за деактивирање на акаунт
     document.getElementById('closeDeactivateModal').addEventListener('click', function() {
         closeModal('deactivateModal');
     });
@@ -381,9 +385,9 @@ document.addEventListener("DOMContentLoaded", function() {
         closeModal('deactivateModal');
     });
 
-    // Submit deactivate account form
+    // Поднесување на формата за деактивирање на акаунт
     document.getElementById('deactivateAccountForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); // Спречување на стандардното поднесување на формата
 
         const deactivationPassword = document.getElementById('deactivationPassword').value;
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
@@ -393,47 +397,47 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.removeItem('loggedInUser');
             alert('Account successfully deleted.');
             closeModal('deactivateModal');
-            window.location.href = "/index.html";
+            window.location.href = "https://blagojce-7.github.io/dropshipping/index.html";
         } else {
             alert('Incorrect password.');
         }
     });
 
-    // Function to close modal windows
+    // Функција за затворање на модалните прозорци
     function closeModal(modalId) {
         const modal = document.getElementById(modalId);
         modal.style.display = 'none';
-        document.body.classList.remove('modal-open'); // Allow scrolling
+        document.body.classList.remove('modal-open'); // Овозможување на скролање на телото
     }
 
-    // Event listener for pressing Enter in deactivate account modal
+    // Слушател за настан за притискање на Enter во модалниот прозорец за деактивирање акаунт
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' && document.getElementById('deactivateModal').style.display === 'block') {
             event.preventDefault();
             document.getElementById('deactivateAccountForm').dispatchEvent(new Event('submit'));
         }
 
-        // Event listener for pressing Enter in change password modal
+        // Слушател за настан за притискање на Enter во модалниот прозорец за промена на лозинка
         if (event.key === 'Enter' && document.getElementById('changePasswordModal').style.display === 'block') {
             event.preventDefault();
             document.getElementById('changePasswordForm').dispatchEvent(new Event('submit'));
         }
     });
 
-    // Event listener for showing/hiding password
+    // Слушател за настан за прикажување/скривање на лозинката
     document.getElementById('showPasswordCheckbox').addEventListener('change', function() {
         const currentPasswordInput = document.getElementById('currentPasswordChange');
         const newPasswordInput = document.getElementById('newPasswordChange');
         if (this.checked) {
-            currentPasswordInput.type = 'text'; // Show password
-            newPasswordInput.type = 'text'; // Show password
+            currentPasswordInput.type = 'text'; // Прикажување на лозинката
+            newPasswordInput.type = 'text'; // Прикажување на лозинката
         } else {
-            currentPasswordInput.type = 'password'; // Hide password
-            newPasswordInput.type = 'password'; // Hide password
+            currentPasswordInput.type = 'password'; // Скривање на лозинката
+            newPasswordInput.type = 'password'; // Скривање на лозинката
         }
     });
 });
-// Open profile modal
+// Отворање на модалниот прозорец за профил
 document.getElementById('profileLink').addEventListener('click', function() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     document.getElementById('profileFirstName').textContent = loggedInUser.firstName;
@@ -442,37 +446,35 @@ document.getElementById('profileLink').addEventListener('click', function() {
     document.getElementById('profileGender').textContent = loggedInUser.gender;
     const profileModal = document.getElementById('profileModal');
     profileModal.style.display = 'block';
-    document.body.classList.add('modal-open'); // Prevent scrolling
+    document.body.classList.add('modal-open'); // Спречување на скролање на телото
 });
 
-// Close profile modal
+// Затворање на модалниот прозорец за профил
 document.getElementById('closeProfileModal').addEventListener('click', function() {
     closeModal('profileModal');
 });
 
-// Function to close modal windows
+// Функција за затворање на модалните прозорци
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = 'none';
-    document.body.classList.remove('modal-open'); // Allow scrolling
+    document.body.classList.remove('modal-open'); // Овозможување на скролање на телото
 }
 
-// Event listener for showing/hiding password
+// Слушател за настан за прикажување/скривање на лозинката
 document.getElementById('showLoginPassword').addEventListener('change', function() {
     const passwordInput = document.getElementById('loginPassword');
     if (this.checked) {
-        passwordInput.type = 'text'; // Show password
-    } else {
-        passwordInput.type = 'password'; // Hide password
-    }
+        passwordInput.type = 'text'; // Прикажување на лозинката
+    } 
 });
 
-// Load subscribed email addresses from localStorage
+// Вчитување на претплатените емаил адреси од localStorage
 let subscribedEmails = new Set(JSON.parse(localStorage.getItem('subscribedEmails')) || []);
 
-// Function for subscribing
+// Функција за претплата
 function subscribe(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Спречува стандардно поднесување на формата
     var emailInput = document.getElementById('email');
     var email = emailInput.value.trim();
     var messageDiv = document.getElementById('message');
@@ -485,11 +487,11 @@ function subscribe(event) {
             localStorage.setItem('subscribedEmails', JSON.stringify(Array.from(subscribedEmails)));
             messageDiv.innerText = `Thank you for subscribing! You'll now receive updates from Urban Vibe Store at ${email}.`;
         }
-        emailInput.value = ''; // Clear the input field
+        emailInput.value = ''; // Го брише полето за внесување
         messageDiv.style.display = 'block';
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // Hide the message after 5 seconds
+        // Го крие порака по 5 секунди
         setTimeout(() => {
             messageDiv.style.display = 'none';
         }, 5000);
@@ -498,7 +500,7 @@ function subscribe(event) {
     }
 }
 
-// Check if the user is already subscribed on both pages
+// Проверка дали корисникот веќе е претплатен на двете страници
 function checkSubscriptionStatus() {
     var emailInput = document.getElementById('email');
     var email = emailInput.value.trim();
@@ -509,7 +511,7 @@ function checkSubscriptionStatus() {
         messageDiv.style.display = 'block';
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // Hide the message after 5 seconds
+        // Го крие порака по 5 секунди
         setTimeout(() => {
             messageDiv.style.display = 'none';
         }, 5000);

@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize cart display, update the cart item count, and check the cart status when the page loads
+    // Иницијализирај ја прикажувањето на количката, ажурирај го бројот на ставки во количката и провери ја состојбата на количката кога ќе се вчита страницата
     displayCartItems();
     updateCartCount();
-    checkCartStatus(); // Check the cart status when the page loads
+    checkCartStatus(); // Провери ја состојбата на количката при вчитување на страницата
 });
 
 function displayCartItems() {
-    // Retrieve cart items from localStorage or initialize an empty array if there are no items
+    // Преземи ги ставките од количката од localStorage или иницијализирај празна низа ако нема ниедна ставка
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     var cartItemsContainer = document.getElementsByClassName('cart-items')[0];
 
-    // Clear existing items
+    // Исчисти ги постојните ставки
     cartItemsContainer.innerHTML = '';
 
-    // For each item in the cart, create a row and populate it with item details
+    // За секоја ставка во количката, создај ред и пополни го со информации за ставката
     cartItems.forEach(item => {
         var cartRow = document.createElement('tr');
         cartRow.classList.add('cart-row');
@@ -31,14 +31,14 @@ function displayCartItems() {
         cartRow.innerHTML = cartRowContents;
         cartItemsContainer.append(cartRow);
 
-        // Add event listeners for the remove button and quantity change
+        // Додај слушатели на настани за копчето за отстранување и промената на количината
         cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
         cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged);
     });
 
-    // Update the total amount and check the cart status
+    // Ажурирај го вкупниот износ и провери ја состојбата на количката
     updateCartTotal();
-    checkCartStatus(); // Check the cart status after displaying items
+    checkCartStatus(); // Провери ја состојбата на количката по прикажување на ставките
 }
 
 function removeCartItem(event) {
@@ -46,25 +46,25 @@ function removeCartItem(event) {
     var title = buttonClicked.parentElement.parentElement.getElementsByClassName('cart-item-title')[0].innerText;
     buttonClicked.parentElement.parentElement.remove();
 
-    // Retrieve cart items from localStorage and filter out the removed items
+    // Преземи ги ставките од количката од localStorage и филтрирај ја за да ги отстраниш ставките кои се избришани
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     cartItems = cartItems.filter(item => item.title !== title);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-    // Update the total amount and cart item count
+    // Ажурирај го вкупниот износ и бројот на ставки во количката
     updateCartTotal();
-    updateCartCount(); // Update the cart item count when an item is removed
-    checkCartStatus(); // Check the cart status after removing an item
+    updateCartCount(); // Ажурирај го бројот на ставки во количката кога ќе се отстрани ставка
+    checkCartStatus(); // Провери ја состојбата на количката по отстранување на ставка
 }
 
 function quantityChanged(event) {
     var input = event.target;
     if (isNaN(input.value) || input.value < 1) {
-        input.value = 1; // Set quantity to 1 if the value is invalid or less than 1
+        input.value = 1; // Врати ја количината на 1 ако вредноста е невалидна или помала од 1
     } else if (input.value > 20) {
-        input.value = 20; // Limit the quantity to a maximum of 20
+        input.value = 20; // Ограничување на количината на максимум 20
     }
-    updateCartTotal(); // Update the total amount
+    updateCartTotal(); // Ажурирај го вкупниот износ
 }
 
 function updateCartTotal() {
@@ -72,7 +72,7 @@ function updateCartTotal() {
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
     var total = 0;
 
-    // Calculate the total amount based on the price and quantity of each item
+    // Пресметај го вкупниот износ според цената и количината на секоја ставка
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i];
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
@@ -82,37 +82,37 @@ function updateCartTotal() {
         total += (price * quantity);
     }
 
-    total = Math.round(total * 100) / 100; // Round the total amount to two decimal places
+    total = Math.round(total * 100) / 100; // Заокружи го вкупниот износ на две децимали
     document.getElementsByClassName('cart-total-price')[0].innerText = total + '€';
 
-    checkCartStatus(); // Check the cart status after updating the total amount
+    checkCartStatus(); // Провери ја состојбата на количката по ажурирање на вкупниот износ
 }
 
 function updateCartCount() {
-    // Retrieve cart items from localStorage and update the cart item count
+    // Преземи ги ставките од количката од localStorage и ажурирај го бројот на ставки во количката
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     document.getElementById('cart-count').innerText = cartItems.length;
 }
 
 function checkCartStatus() {
-    // Retrieve cart items from localStorage and check the cart status
+    // Преземи ги ставките од количката од localStorage и проверувај ја состојбата на количката
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     var cartContent = document.getElementById('cart-content');
     var shippingForm = document.getElementById('shippingForm');
     var total = parseFloat(document.getElementsByClassName('cart-total-price')[0].innerText.replace('Price: ', ''));
 
     if (total === 0) {
-        // Redirect to the homepage if the total amount is 0
-        window.location.href = '/index.html';
+        // Пренасочи на почетната страница ако вкупниот износ е 0
+        window.location.href = 'https://blagojce-7.github.io/dropshipping/index.html';
     } else {
-        cartContent.style.display = 'block'; // Show the cart content
-        shippingForm.style.display = 'block'; // Show the shipping form
+        cartContent.style.display = 'block'; // Прикажи ја содржината на количката
+        shippingForm.style.display = 'block'; // Прикажи ја формата за испорака
     }
 }
 
-// Add event listener for the shipping form submission
+// Додај слушател на настани за поднесување на формата за испорака
 document.getElementById('shippingForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Спречи го стандардното однесување на формата
 
     var fullName = document.getElementById('fullName').value;
     var address = document.getElementById('address').value;
@@ -125,7 +125,7 @@ document.getElementById('shippingForm').addEventListener('submit', function (eve
         return;
     }
 
-    // Show confirmation with the shipping information
+    // Прикажи потврда со информациите за испорака
     alert(`Shipping information submitted successfully!
     Full Name: ${fullName}
     Address: ${address}
@@ -133,16 +133,16 @@ document.getElementById('shippingForm').addEventListener('submit', function (eve
     ZIP Code: ${zip}
     Country: ${country}`);
 
-    document.getElementById('purchaseBtn').disabled = false; // Enable the purchase button
+    document.getElementById('purchaseBtn').disabled = false; // Овозможи го копчето за купување
 });
 
-// Add event listener for the purchase button
+// Додај слушател на настани за копчето за купување
 document.getElementById('purchaseBtn').addEventListener('click', function () {
     purchaseClicked();
 });
 
 function purchaseClicked() {
-    // Retrieve the shipping information
+    // Преземи ги информациите за испорака
     var fullName = document.getElementById('fullName').value;
     var address = document.getElementById('address').value;
     var city = document.getElementById('city').value;
@@ -156,30 +156,30 @@ function purchaseClicked() {
         `ZIP Code: ${zip}\n` +
         `Country: ${country}`);
 
-    localStorage.removeItem('cartItems'); // Remove cart items from localStorage
+    localStorage.removeItem('cartItems'); // Отстрани ги ставките од количката од localStorage
     var cartItemsContainer = document.getElementsByClassName('cart-items')[0];
     while (cartItemsContainer.hasChildNodes()) {
-        cartItemsContainer.removeChild(cartItemsContainer.firstChild); // Clear all items from the cart
+        cartItemsContainer.removeChild(cartItemsContainer.firstChild); // Исчисти ги сите ставки од количката
     }
-    updateCartTotal(); // Update the total amount
-    updateCartCount(); // Update the cart item count after purchase
-    checkCartStatus(); // Check the cart status after purchase
-    document.getElementById('shippingForm').reset(); // Reset the shipping form
-    document.getElementById('purchaseBtn').disabled = true; // Disable the purchase button
+    updateCartTotal(); // Ажурирај го вкупниот износ
+    updateCartCount(); // Ажурирај го бројот на ставки во количката по купувањето
+    checkCartStatus(); // Провери ја состојбата на количката по купувањето
+    document.getElementById('shippingForm').reset(); // Ресетирај ја формата за испорака
+    document.getElementById('purchaseBtn').disabled = true; // Оневозможи го копчето за купување
 }
 
-// Function to remove all items from the cart and redirect to the homepage
+// Функција за отстранување на сите ставки од количката и пренасочување на почетната страница
 document.getElementById('removeAllBtn').addEventListener('click', function () {
-    localStorage.removeItem('cartItems'); // Remove all items from localStorage
+    localStorage.removeItem('cartItems'); // Отстрани ги сите ставки од localStorage
     var cartItemsContainer = document.getElementsByClassName('cart-items')[0];
     while (cartItemsContainer.hasChildNodes()) {
-        cartItemsContainer.removeChild(cartItemsContainer.firstChild); // Clear all items from the cart
+        cartItemsContainer.removeChild(cartItemsContainer.firstChild); // Исчисти ги сите ставки од количката
     }
-    updateCartTotal(); // Update the total amount
-    updateCartCount(); // Update the cart item count after removal
-    checkCartStatus(); // Check the cart status after removal
-    window.location.href = '/index.html'; // Redirect to the homepage
+    updateCartTotal(); // Ажурирај го вкупниот износ
+    updateCartCount(); // Ажурирај го бројот на ставки во количката по отстранувањето
+    checkCartStatus(); // Провери ја состојбата на количката по отстранувањето
+    window.location.href = 'https://blagojce-7.github.io/dropshipping/index.html'; // Пренасочи на почетната страница
 });
 
-// Update the cart item count when the page loads
+// Ажурирај го бројот на ставки во количката кога ќе се вчита страницата
 document.addEventListener('DOMContentLoaded', updateCartCount);
