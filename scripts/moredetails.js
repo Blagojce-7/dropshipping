@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   loadProductDetails();
   updateCartCount();
-  updateRemoveButtonState(); // Ажурирање на состојбата на копчето при вчитување на страницата
+  updateRemoveButtonState(); // Update the state of the button when the page loads
 
   let currentImageIndex = 0;
   const thumbnails = document.querySelectorAll('.thumbnails img');
@@ -12,38 +12,38 @@ document.addEventListener('DOMContentLoaded', function () {
           if (i === index) {
               thumb.classList.add('active');
               productImage.src = thumb.src;
-              productImage.style.width = '500px'; // Поставување на фиксна ширина
-              productImage.style.height = '500px'; // Поставување на фиксна висина
-              productImage.style.objectFit = 'cover'; // Задржување на пропорциите
-              productImage.style.borderRadius = '10px'; // Заоблување на аглите
-              productImage.style.display = 'block'; // Прикажување на активната слика
+              productImage.style.width = '500px'; // Set fixed width
+              productImage.style.height = '500px'; // Set fixed height
+              productImage.style.objectFit = 'cover'; // Maintain aspect ratio
+              productImage.style.borderRadius = '10px'; // Round corners
+              productImage.style.display = 'block'; // Display active image
           } else {
               thumb.classList.remove('active');
           }
       });
   }
 
-  document.getElementById('prev-thumbnail').addEventListener('click', function () {
-      if (currentImageIndex > 0) {
-          currentImageIndex--;
-      } else {
-          currentImageIndex = thumbnails.length - 1;
-      }
+document.getElementById('prev-thumbnail').addEventListener('click', function () {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+    } else {
+        currentImageIndex = thumbnails.length - 1;
+    }
       updateActiveImage(currentImageIndex);
-  });
+});
 
-  document.getElementById('next-thumbnail').addEventListener('click', function () {
-      if (currentImageIndex < thumbnails.length - 1) {
-          currentImageIndex++;
-      } else {
-          currentImageIndex = 0;
-      }
+document.getElementById('next-thumbnail').addEventListener('click', function () {
+    if (currentImageIndex < thumbnails.length - 1) {
+        currentImageIndex++;
+    } else {
+        currentImageIndex = 0;
+    }
       updateActiveImage(currentImageIndex);
-  });
+});
 
-  // Иницијално поставување на првата слика како активна
-  if (thumbnails.length > 0) {
-      updateActiveImage(0);
+// Initially set the first image as active
+if (thumbnails.length > 0) {
+    updateActiveImage(0);
   }
 });
 

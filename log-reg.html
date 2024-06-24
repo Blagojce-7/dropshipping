@@ -8,63 +8,66 @@
     <link rel="stylesheet" href="https://blagojce-7.github.io/dropshipping/styles/log-reg.css">
 </head>
 <body>
- <!-- Копче за враќање назад на почетната страница -->
+ <!-- Button to go back to the home page -->
  <h2>FLASH STORE</h2>
  <br>
  <div class="container" id="container">
-     <!-- Форма за регистрација -->
-     <div class="form-container sign-up-container">
-         <form id="signUpForm">
-             <h1>Create Account</h1><br>
-             <select id="signUpType" required>
-                 <option value="primary">Primary</option>
-                 <option value="facebook">Facebook</option>
-                 <option value="google">Google</option>
-                 <option value="linkedin">LinkedIn</option>
-             </select>
-             <input type="text" id="signUpFirstName" placeholder="First Name" required />
-             <input type="text" id="signUpLastName" placeholder="Last Name" required />
-             <input type="email" id="signUpEmail" placeholder="Email" required />
-             <select id="signUpGender" required>
-                 <option value="Male">Male</option>
-                 <option value="Female">Female</option>
-             </select>
-             <input type="password" id="signUpPassword" placeholder="Password (min. 5 character)" required />
-             <button type="submit" id="reg-signup">Sign Up</button>
-         </form>
-     </div>
-     <!-- Форма за најава -->
-     <div class="form-container sign-in-container">
-         <form id="signInForm">
-             <h1>Sign in</h1>
-             <div class="social-container">
-                 <a href="#" class="social" id="facebookSignIn"><img width="100%" src="https://blagojce-7.github.io/dropshipping/images/facebook.webp" alt="Facebook"></a>
-                 <a href="#" class="social" id="googleSignIn"><img width="100%" src="https://blagojce-7.github.io/dropshipping/images/google.png" alt="Google"></a>
-                 <a href="#" class="social" id="linkedinSignIn"><img width="95%" src="https://blagojce-7.github.io/dropshipping/images/linked.webp" alt="LinkedIn"></a>
-             </div>
-             <span>or use your account</span>
-             <input type="email" id="signInEmail" placeholder="Email" required />
-             <input type="password" id="signInPassword" placeholder="Password" required />
-             <a href="#" id="forgotPasswordLink">Forgot your password?</a>
-             <button type="submit">Sign In</button>
-         </form>
-     </div>
-     <!-- Overlay контејнер за анимации -->
-     <div class="overlay-container">
-         <div class="overlay">
-             <div class="overlay-panel overlay-left">
-                 <h1>Welcome Back!</h1>
-                 <p>To keep connected with us please login with your personal info</p>
-                 <button class="ghost" id="signIn">Sign In</button>
-             </div>
-             <div class="overlay-panel overlay-right">
-                 <h1>Hello, Friend!</h1>
-                 <p>Enter your personal details and start your journey with us</p>
-                 <button class="ghost" id="signUp">Sign Up</button>
-             </div>
-         </div>
-     </div>
-     <!-- Форма за заборавена лозинка -->
+<!-- Registration form -->
+    <div class="form-container sign-up-container">
+        <form id="signUpForm">
+            <h1>Create Account</h1><br>
+            <select id="signUpType" required>
+                <option value="primary">Primary</option>
+                <option value="facebook">Facebook</option>
+                <option value="google">Google</option>
+                <option value="linkedin">LinkedIn</option>
+            </select>
+            <input type="text" id="signUpFirstName" placeholder="First Name" required />
+            <input type="text" id="signUpLastName" placeholder="Last Name" required />
+            <input type="email" id="signUpEmail" placeholder="Email" required />
+            <select id="signUpGender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="password" id="signUpPassword" placeholder="Password (min. 5 character)" required />
+            <button type="submit" id="reg-signup">Sign Up</button>
+        </form>
+    </div>
+<!-- Login Form -->
+    <div class="form-container sign-in-container">
+        <form id="signInForm">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social" id="facebookSignIn"><img width="100%" src="/images/facebook.webp" alt="Facebook"></a>
+                <a href="#" class="social" id="googleSignIn"><img width="100%" src="/images/google.png" alt="Google"></a>
+                <a href="#" class="social" id="linkedinSignIn"><img width="95%" src="/images/linked.webp" alt="LinkedIn"></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" id="signInEmail" placeholder="Email" required />
+            <input type="password" id="signInPassword" placeholder="Password" required />
+            <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+          <!-- New Sign Up Button -->
+            <button type="button" id="mobileSignUpButton">Sign Up</button>
+        </form>
+    </div>
+<!-- Overlay container for animations -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start your journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Forgot Password Form -->
      <div class="form-container forgot-password-container" id="forgotPasswordContainer" style="display: none;">
         <form id="forgotPasswordForm">
             <h1>Forgot Password</h1>
@@ -74,7 +77,7 @@
         </form>
     </div>
  </div>
- <!-- Модален прозорец за најава -->
+<!-- Modal login window -->
  <div id="loginModal">
      <div class="modal-content">
          <span class="close">&times;</span>
